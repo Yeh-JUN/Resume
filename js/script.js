@@ -104,7 +104,6 @@ function changeBg(){
   */
   document.getElementById('mainContainer').style.backgroundSize = 'cover';
   document.getElementById('mainContainer').style.backgroundPosition ='center';
-  console.log(changeImgs[currentIndex])
 }
 setInterval('changeBg()',3500);
 
