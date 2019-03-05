@@ -198,7 +198,6 @@ function changeBg(){
   */
   document.getElementById('mainContainer').style.backgroundSize = 'cover';
   document.getElementById('mainContainer').style.backgroundPosition ='center';
-  
 }
 setInterval('changeBg()',10000);
 
