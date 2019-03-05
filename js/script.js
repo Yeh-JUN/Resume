@@ -67,6 +67,100 @@ $(document).ready(function() {
 });
 /**內容動畫效果(personal)**/
 
+/***c點擊切換效果****/
+var chF=document.getElementById('changeFirst');
+var chS=document.getElementById('changeSecond');
+chF.addEventListener('click' , changeFirst);
+chS.addEventListener('click' , changeSecond);
+
+function changeFirst(){
+  var changeText = [    
+    "Hi! I'm Duncan.",
+    "Constant Learning"
+  ];
+  var changeImgs = [    
+    "imgs/Duncan-2.png",
+    "imgs/Duncan-4.png"
+  ];
+  var elTextFirst = document.getElementById('greetingTextOne');
+  var elImgFirst = document.getElementById('mainContainer');
+  /**切換文字**/
+  if(elTextFirst.textContent === changeText[1]){
+    $(elTextFirst).animate({
+      opacity:0
+    },300,
+      function(){
+        $(elTextFirst).animate({
+          opacity: 1
+      },1500);
+      elTextFirst.textContent = changeText[0];
+    });
+    }else{
+      elTextFirst.textContent = changeText[0];
+    };
+    /**切換圖片**/
+  if(elImgFirst.style.background = changeImgs[1]){
+    $(elImgFirst).animate({
+      opacity:0
+    },300,
+      function(){
+        $(elImgFirst).animate({
+          opacity:1
+      },1500);
+      elImgFirst.style.background = "url(" + changeImgs[0] + " )";
+      document.getElementById('mainContainer').style.backgroundSize = 'cover';
+      document.getElementById('mainContainer').style.backgroundPosition ='center';
+    });
+    }else{
+      elImgFirst.style.background = "url("+ changeImgs[0] + ")";
+    };
+}
+
+function changeSecond(){
+  var changeText = [    
+    "Hi! I'm Duncan.",
+    "Constant Learning"
+  ];
+  var changeImgs = [    
+    "imgs/Duncan-2.png",
+    "imgs/Duncan-4.png"
+  ];
+  var elTextSecond = document.getElementById('greetingTextOne');
+  var elImgSecond = document.getElementById('mainContainer')
+  if(elTextSecond.textContent = changeText[0]){
+    /**切換文字**/
+    $(elTextSecond).animate({
+      opacity:0
+    },300,
+      function(){
+        $(elTextSecond).animate({
+          opacity: 1
+      },1500);
+      elTextSecond.textContent = changeText[1];
+    });
+    }else{
+      elTextSecond.textContent = changeText[1];
+    }
+    /**切換圖片**/
+  if(elImgSecond.style.background = changeImgs[0]){
+    $(elImgSecond).animate({
+      opacity:0
+    },300,
+      function(){
+        $(elImgSecond).animate({
+          opacity:1
+        },1500);
+        elImgSecond.style.background = "url(" + changeImgs[1] + " )";
+        document.getElementById('mainContainer').style.backgroundSize = 'cover';
+        document.getElementById('mainContainer').style.backgroundPosition ='center';
+      });
+    }else{
+      elImgSecond.style.background = "url("+ changeImgs[1] + ")";
+  }
+}
+/***頁面點擊切換效果****/
+
+
 /*****切首頁內容*****/
 var currentText = 0;
 function changeText(){
@@ -82,7 +176,7 @@ function changeText(){
     document.getElementById('greetingTextOne').textContent= changeText[currentText];
   }
 }
-setInterval('changeText()' , 3500);
+setInterval('changeText()' , 10000);
 
 /**切換首頁內容背景**/
 var currentIndex = 0;
@@ -105,7 +199,7 @@ function changeBg(){
   document.getElementById('mainContainer').style.backgroundSize = 'cover';
   document.getElementById('mainContainer').style.backgroundPosition ='center';
 }
-setInterval('changeBg()',3500);
+setInterval('changeBg()',10000);
 
 /******************************* 
 var currentIndex = 1; 
