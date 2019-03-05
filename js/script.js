@@ -67,7 +67,7 @@ $(document).ready(function() {
 });
 /**內容動畫效果(personal)**/
 
-/***頁面點擊切換效果****/
+/***c點擊切換效果****/
 var chF=document.getElementById('changeFirst');
 var chS=document.getElementById('changeSecond');
 chF.addEventListener('click' , changeFirst);
@@ -128,6 +128,7 @@ function changeSecond(){
   var elTextSecond = document.getElementById('greetingTextOne');
   var elImgSecond = document.getElementById('mainContainer')
   if(elTextSecond.textContent = changeText[0]){
+    /**切換文字**/
     $(elTextSecond).animate({
       opacity:0
     },300,
@@ -140,7 +141,7 @@ function changeSecond(){
     }else{
       elTextSecond.textContent = changeText[1];
     }
-
+    /**切換圖片**/
   if(elImgSecond.style.background = changeImgs[0]){
     $(elImgSecond).animate({
       opacity:0
@@ -157,7 +158,7 @@ function changeSecond(){
       elImgSecond.style.background = "url("+ changeImgs[1] + ")";
   }
 }
-/***點擊切換效果****/
+/***頁面點擊切換效果****/
 
 
 /*****切首頁內容*****/
