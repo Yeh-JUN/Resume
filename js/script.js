@@ -6,7 +6,18 @@ uniBody.setAttribute('style', 'display: none;');
 var highBody='';
 var highBody = document.querySelector('.highSchoolBody');
 highBody.setAttribute('style', 'display: none;');
+
+var juniBody='';
+var juniBody = document.querySelector('.juniorHighBody');
+juniBody.setAttribute('style', 'display: none;');
+
+var elementaryBody='';
+var elementaryBody = document.querySelector('.elementaryBody');
+elementaryBody.setAttribute('style', 'display: none;');
 /**隱藏元素**/
+/*顯示元素**/
+
+/*顯示元素**/
 /*
 var elnb = document.querySelector('.navbar');
 var ms = new MenuSpy(elnb);
@@ -67,7 +78,7 @@ $(document).ready(function() {
 });
 /**內容動畫效果(personal)**/
 
-/***c點擊切換效果****/
+/***點擊切換效果****/
 var chF=document.getElementById('changeFirst');
 var chS=document.getElementById('changeSecond');
 chF.addEventListener('click' , changeFirst);
@@ -254,7 +265,7 @@ function changeBg(){
 ***********************************/
 /**切換首頁內容**/
 
-/**取消預設**/
+/**取消預設(大學)**/
 document.querySelector('.universityA').addEventListener('click' , function(event){
   event.preventDefault();
 },false);
@@ -280,7 +291,7 @@ function uniDisplay(){
   }
 }
 
-/**取消預設**/
+/**取消預設(高中)**/
 document.querySelector('.highSchoolA').addEventListener('click' , function(event){
   event.preventDefault();
 },false);
@@ -295,6 +306,58 @@ function highDisplay(){
     highBody.style.display='';
   } else{
     highBody.style.display='none';
+  }
+}
+
+/**取消預設(國中)**/
+document.querySelector('.juniorHighA').addEventListener('click' , function(event){
+  event.preventDefault();
+},false);
+/**事件邦定**/
+var juniButton='';
+var juniButton = document.querySelector('.juniorHighA');
+juniButton.addEventListener('click' , juniDisplay);
+
+function juniDisplay(){
+  /*
+  var uniButton=document.querySelector('.universityA');//先定義儲存變數
+  if(uniButton.style.background ='#f2f3f7'){
+    uniButton.style.background ='#2c98f0';
+  }else{
+    uniButton.style.background ='#f2f3f7';
+  }
+  */
+  var juniBody = document.querySelector('.juniorHighBody');
+  if(juniBody.style.display==='none'){
+    juniBody.style.display='';
+  } else{
+    juniBody.style.display='none';
+  }
+}
+
+/**取消預設(國小)**/
+document.querySelector('.elementaryA').addEventListener('click' , function(event){
+  event.preventDefault();
+},false);
+/**事件邦定**/
+var elemButton='';
+var elemButton = document.querySelector('.elementaryA');
+elemButton.addEventListener('click' , elemDisplay);
+
+function elemDisplay(){
+  /*
+  var uniButton=document.querySelector('.universityA');//先定義儲存變數
+  if(uniButton.style.background ='#f2f3f7'){
+    uniButton.style.background ='#2c98f0';
+  }else{
+    uniButton.style.background ='#f2f3f7';
+  }
+  */
+  var elemBody = document.querySelector('.elementaryBody');
+  if(elemBody.style.display==='none'){
+    elemBody.style.display='';
+  } else{
+    elemBody.style.display='none';
   }
 }
 
