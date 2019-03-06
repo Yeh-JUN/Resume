@@ -543,12 +543,9 @@
   text-decoration:none;
 }
 
-.big{
-  transition: all 0.5s ease-in-out;
-}
-
-.big:hover{
-  font-size:1.5em;
+.fab:hover{
+  transition: all 0.7s ease-out;
+  transform:rotate(6.28318rad) scale(1.5);
 }
 
 /**ipad(768px)**/
