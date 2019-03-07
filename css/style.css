@@ -272,7 +272,7 @@
   padding-left:2.5em;
   padding-right:2.5em;
 }
-.universityA , .highSchoolA{
+.universityA , .highSchoolA , .juniorHighA , .elementaryA{
   text-decoration:none;
   background: #2c98f0;
   border: 1px solid #e6e6e6!important;
@@ -286,7 +286,7 @@
   display: block;
 }
 
-.universityBody , .highSchoolBody{
+.universityBody , .highSchoolBody , .juniorHighBody , .elementaryBody{
   padding: 1.5em;
   margin-top: 5px;
   border: 1px solid #e6e6e6!important;
