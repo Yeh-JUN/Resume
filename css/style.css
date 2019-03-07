@@ -107,6 +107,9 @@
   /*鼠标经过时还原到正常比例*/
 }
 
+.active{
+  background-color:skyblue;
+}
 
 
 
