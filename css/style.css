@@ -543,6 +543,10 @@
   text-decoration:none;
 }
 
+.fab{
+  margin: 0 7px;
+}
+
 .fab:hover{
   transition: all 0.7s ease-out;
   transform:rotate(6.28318rad) scale(1.5);
