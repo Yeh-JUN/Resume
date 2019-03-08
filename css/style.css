@@ -277,16 +277,17 @@
 }
 .universityA , .highSchoolA , .juniorHighA , .elementaryA{
   text-decoration:none;
-  background: #2c98f0;
+  background: #f2f3f7;
   border: 1px solid #e6e6e6!important;
   color: #333;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   padding:20px 25px;
   margin-bottom: 5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   display: block;
+  transition:all 0.1s ease-in;
 }
 
 .universityBody , .highSchoolBody , .juniorHighBody , .elementaryBody{
@@ -306,6 +307,7 @@
   font-weight: 600;
   color: rgba(0,0,0,.7);
 }
+
 /**************education***************/
 
 /**************experience**************/
@@ -369,6 +371,7 @@
 .fontawesome{
   display: inline-block;
 }
+
 
 /**************skills*****************/
 #skillsContainer{
@@ -546,12 +549,13 @@
   text-decoration:none;
 }
 
-.big{
-  transition: all 0.5s ease-in-out;
+.fab{
+  margin: 0 7px;
 }
 
-.big:hover{
-  font-size:1.5em;
+.fab:hover{
+  transition: all 0.7s ease-out;
+  transform:rotate(6.28318rad) scale(1.5);
 }
 
 /**ipad(768px)**/
@@ -595,12 +599,14 @@
 
 /**animate**/
 .hideLeft{
-  margin-left:-50px;
+  position: relative;
+  left: -50px;
   opacity:0;
 }
 
 .hideRight{
-  margin-right:-50px;
+  position: relative;
+  right: -50px;
   opacity:0;
 }
 

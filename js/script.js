@@ -15,22 +15,6 @@ var elementaryBody='';
 var elementaryBody = document.querySelector('.elementaryBody');
 elementaryBody.setAttribute('style', 'display: none;');
 /**隱藏元素**/
-/*顯示元素**/
-
-/*顯示元素**/
-/*
-var elnb = document.querySelector('.navbar');
-var ms = new MenuSpy(elnb);
-
-var ms = new MenuSpy(elnb,{
-  menuItemSelector: 'a[href^="#"]',
-  activeClass   : 'active',
-  threshold     : 15,
-  enableLocationHash: true,
-  hashTimeout   : 600,
-  callback      : null
-});
-*/
 
 $(window).bind('scroll', function() {
   var currentTop = $(window).scrollTop();
@@ -70,7 +54,7 @@ $(document).ready(function() {
         /* If the object is completely visible in the window, fade it it */
         if( bottom_of_window > bottom_of_object ){
           $(this).animate({
-            'margin-left':'0px',
+            'left':'0px',
             'opacity':'1'
           },1000); 
         } 
@@ -82,7 +66,7 @@ $(document).ready(function() {
       /* If the object is completely visible in the window, fade it it */
       if( bottom_of_window > bottom_of_object ){
         $(this).animate({
-          'margin-right':'0px',
+          'right':'0px',
           'opacity':'1'
         },1000); 
       } 
@@ -185,7 +169,8 @@ function changeSecond(){
 /***頁面點擊切換效果****/
 
 
-/*****切首頁內容*****/
+
+/*****自動切換首頁內容*****/
 var currentText = 0;
 function changeText(){
   var changeText = [    
@@ -202,7 +187,7 @@ function changeText(){
 }
 setInterval('changeText()' , 10000);
 
-/**切換首頁內容背景**/
+/**自動切換首頁內容背景**/
 var currentIndex = 0;
 function changeBg(){
   var changeImgs = [    
@@ -258,24 +243,6 @@ function changeBg(){
 }
 */
 
-/********************************* 
-var currentIndex = 0;
-function changeBg(){
-  var backgroundImgs = [
-    "imgs/Duncan-2.png",
-    "imgs/Duncan-3.png",
-    "imgs/Duncan-4.png",
-    "imgs/Duncan-5.png"
-  ] //長度為4
-  if(currentIndex >= backgroundImgs.lenght){
-    currentIndex=0;
-
-    var mainBg = document.getElementById('mainContainer');
-    mainBg.style.background= "url(" + backgroundImgs[currentIndex] + ")";
-    currentIndex++;
-  }
-}
-***********************************/
 /**切換首頁內容**/
 
 /**取消預設(大學)**/
@@ -288,14 +255,29 @@ var uniButton = document.querySelector('.universityA');
 uniButton.addEventListener('click' , uniDisplay);
 
 function uniDisplay(){
-  /*
-  var uniButton=document.querySelector('.universityA');//先定義儲存變數
-  if(uniButton.style.background ='#f2f3f7'){
-    uniButton.style.background ='#2c98f0';
-  }else{
-    uniButton.style.background ='#f2f3f7';
+  var changeColor =[
+    '#f2f3f7',
+    "skyblue"
+  ];
+  var changeTextColor =[
+    "#333",
+    "#fff"
+  ];
+
+  var eduBg = document.querySelector('.universityA');
+  var changeFas = document.getElementById('uniFas');
+  if(eduBg.style.background === changeColor[0]){
+    eduBg.style.background = changeColor[1];
+  } else if(eduBg.style.background === changeColor[1]){
+    eduBg.style.background = changeColor[0];
+    eduBg.style.color = changeTextColor[0];
+    changeFas.setAttribute('class' , ' fas fa-plus');
+  } else{
+    eduBg.style.background = changeColor[1];
+    eduBg.style.color = changeTextColor[1];
+    changeFas.setAttribute('class' , ' fas fa-minus');
   }
-  */
+  
   var uniBody = document.querySelector('.universityBody');
   if(uniBody.style.display==='none'){
     uniBody.style.display='';
@@ -314,6 +296,30 @@ var highButton = document.querySelector('.highSchoolA');
 highButton.addEventListener('click' , highDisplay);
 
 function highDisplay(){
+  var changeColor =[
+    "#f2f3f7",
+    "skyblue"
+  ];
+  var changeTextColor =[
+    "#333",
+    "#fff"
+  ];
+
+  var eduBg='';
+  var eduBg = document.querySelector('.highSchoolA');
+  var changeFas = document.getElementById('highFas');
+  if(eduBg.style.background === changeColor[0]){
+    eduBg.style.background = changeColor[1];
+  } else if(eduBg.style.background === changeColor[1]){
+    eduBg.style.background = changeColor[0];
+    eduBg.style.color = changeTextColor[0];
+    changeFas.setAttribute('class' , ' fas fa-plus');
+  } else{
+    eduBg.style.background = changeColor[1];
+    eduBg.style.color = changeTextColor[1];
+    changeFas.setAttribute('class' , ' fas fa-minus');
+  }
+
   var highBody = document.querySelector('.highSchoolBody');//先定義儲存變數
   if(highBody.style.display==='none'){
     highBody.style.display='';
