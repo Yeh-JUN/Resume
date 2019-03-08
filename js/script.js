@@ -6,7 +6,18 @@ uniBody.setAttribute('style', 'display: none;');
 var highBody='';
 var highBody = document.querySelector('.highSchoolBody');
 highBody.setAttribute('style', 'display: none;');
+
+var juniBody='';
+var juniBody = document.querySelector('.juniorHighBody');
+juniBody.setAttribute('style', 'display: none;');
+
+var elementaryBody='';
+var elementaryBody = document.querySelector('.elementaryBody');
+elementaryBody.setAttribute('style', 'display: none;');
 /**隱藏元素**/
+/*顯示元素**/
+
+/*顯示元素**/
 /*
 var elnb = document.querySelector('.navbar');
 var ms = new MenuSpy(elnb);
@@ -80,6 +91,100 @@ $(document).ready(function() {
 });
 /**內容動畫效果(personal)**/
 
+/***點擊切換效果****/
+var chF=document.getElementById('changeFirst');
+var chS=document.getElementById('changeSecond');
+chF.addEventListener('click' , changeFirst);
+chS.addEventListener('click' , changeSecond);
+
+function changeFirst(){
+  var changeText = [    
+    "Hi! I'm Duncan.",
+    "Constant Learning"
+  ];
+  var changeImgs = [    
+    "imgs/Duncan-2.png",
+    "imgs/Duncan-4.png"
+  ];
+  var elTextFirst = document.getElementById('greetingTextOne');
+  var elImgFirst = document.getElementById('mainContainer');
+  /**切換文字**/
+  if(elTextFirst.textContent === changeText[1]){
+    $(elTextFirst).animate({
+      opacity:0
+    },300,
+      function(){
+        $(elTextFirst).animate({
+          opacity: 1
+      },1500);
+      elTextFirst.textContent = changeText[0];
+    });
+    }else{
+      elTextFirst.textContent = changeText[0];
+    };
+    /**切換圖片**/
+  if(elImgFirst.style.background = changeImgs[1]){
+    $(elImgFirst).animate({
+      opacity:0
+    },300,
+      function(){
+        $(elImgFirst).animate({
+          opacity:1
+      },1500);
+      elImgFirst.style.background = "url(" + changeImgs[0] + " )";
+      document.getElementById('mainContainer').style.backgroundSize = 'cover';
+      document.getElementById('mainContainer').style.backgroundPosition ='center';
+    });
+    }else{
+      elImgFirst.style.background = "url("+ changeImgs[0] + ")";
+    };
+}
+
+function changeSecond(){
+  var changeText = [    
+    "Hi! I'm Duncan.",
+    "Constant Learning"
+  ];
+  var changeImgs = [    
+    "imgs/Duncan-2.png",
+    "imgs/Duncan-4.png"
+  ];
+  var elTextSecond = document.getElementById('greetingTextOne');
+  var elImgSecond = document.getElementById('mainContainer')
+  if(elTextSecond.textContent = changeText[0]){
+    /**切換文字**/
+    $(elTextSecond).animate({
+      opacity:0
+    },300,
+      function(){
+        $(elTextSecond).animate({
+          opacity: 1
+      },1500);
+      elTextSecond.textContent = changeText[1];
+    });
+    }else{
+      elTextSecond.textContent = changeText[1];
+    }
+    /**切換圖片**/
+  if(elImgSecond.style.background = changeImgs[0]){
+    $(elImgSecond).animate({
+      opacity:0
+    },300,
+      function(){
+        $(elImgSecond).animate({
+          opacity:1
+        },1500);
+        elImgSecond.style.background = "url(" + changeImgs[1] + " )";
+        document.getElementById('mainContainer').style.backgroundSize = 'cover';
+        document.getElementById('mainContainer').style.backgroundPosition ='center';
+      });
+    }else{
+      elImgSecond.style.background = "url("+ changeImgs[1] + ")";
+  }
+}
+/***頁面點擊切換效果****/
+
+
 /*****切首頁內容*****/
 var currentText = 0;
 function changeText(){
@@ -95,7 +200,7 @@ function changeText(){
     document.getElementById('greetingTextOne').textContent= changeText[currentText];
   }
 }
-setInterval('changeText()' , 3500);
+setInterval('changeText()' , 10000);
 
 /**切換首頁內容背景**/
 var currentIndex = 0;
@@ -117,9 +222,8 @@ function changeBg(){
   */
   document.getElementById('mainContainer').style.backgroundSize = 'cover';
   document.getElementById('mainContainer').style.backgroundPosition ='center';
-  console.log(changeImgs[currentIndex])
 }
-setInterval('changeBg()',3500);
+setInterval('changeBg()',10000);
 
 /******************************* 
 var currentIndex = 1; 
@@ -174,7 +278,7 @@ function changeBg(){
 ***********************************/
 /**切換首頁內容**/
 
-/**取消預設**/
+/**取消預設(大學)**/
 document.querySelector('.universityA').addEventListener('click' , function(event){
   event.preventDefault();
 },false);
@@ -200,7 +304,7 @@ function uniDisplay(){
   }
 }
 
-/**取消預設**/
+/**取消預設(高中)**/
 document.querySelector('.highSchoolA').addEventListener('click' , function(event){
   event.preventDefault();
 },false);
@@ -215,6 +319,58 @@ function highDisplay(){
     highBody.style.display='';
   } else{
     highBody.style.display='none';
+  }
+}
+
+/**取消預設(國中)**/
+document.querySelector('.juniorHighA').addEventListener('click' , function(event){
+  event.preventDefault();
+},false);
+/**事件邦定**/
+var juniButton='';
+var juniButton = document.querySelector('.juniorHighA');
+juniButton.addEventListener('click' , juniDisplay);
+
+function juniDisplay(){
+  /*
+  var uniButton=document.querySelector('.universityA');//先定義儲存變數
+  if(uniButton.style.background ='#f2f3f7'){
+    uniButton.style.background ='#2c98f0';
+  }else{
+    uniButton.style.background ='#f2f3f7';
+  }
+  */
+  var juniBody = document.querySelector('.juniorHighBody');
+  if(juniBody.style.display==='none'){
+    juniBody.style.display='';
+  } else{
+    juniBody.style.display='none';
+  }
+}
+
+/**取消預設(國小)**/
+document.querySelector('.elementaryA').addEventListener('click' , function(event){
+  event.preventDefault();
+},false);
+/**事件邦定**/
+var elemButton='';
+var elemButton = document.querySelector('.elementaryA');
+elemButton.addEventListener('click' , elemDisplay);
+
+function elemDisplay(){
+  /*
+  var uniButton=document.querySelector('.universityA');//先定義儲存變數
+  if(uniButton.style.background ='#f2f3f7'){
+    uniButton.style.background ='#2c98f0';
+  }else{
+    uniButton.style.background ='#f2f3f7';
+  }
+  */
+  var elemBody = document.querySelector('.elementaryBody');
+  if(elemBody.style.display==='none'){
+    elemBody.style.display='';
+  } else{
+    elemBody.style.display='none';
   }
 }
 
