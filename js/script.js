@@ -16,16 +16,21 @@ var elementaryBody = document.querySelector('.elementaryBody');
 elementaryBody.setAttribute('style', 'display: none;');
 /**隱藏元素**/
 
+
+var activeId = null;
 $(window).bind('scroll', function() {
   var currentTop = $(window).scrollTop();
   var elems = $('.scrollspy');
   elems.each(function(index){
-    var elemTop 	= $(this).offset().top;
-    var elemBottom 	= elemTop + $(this).height();
-    if(currentTop >= elemTop && currentTop <= elemBottom){
-      var id 		= $(this).attr('id');
+    var id = $(this).attr('id');
+    var elemTop = $(this).offset().top;
+    var elemBottom	= elemTop + $(this).height();
+    if(currentTop >= elemTop && currentTop <= elemBottom && activeId !== id){
+      activeId = id;
       var navElem = $('a[href="#' + id+ '"]');
-  navElem.parent().addClass('active').siblings().removeClass( 'active' );
+      var navElems = $('.navbarItem');
+      navElems.removeClass( 'active' );
+      navElem.addClass('active');
     }
   })
 }); 

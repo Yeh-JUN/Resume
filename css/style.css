@@ -67,6 +67,7 @@
   text-transform:uppercase;
 }
 .navbarItem{
+  display: inline-block;
   font-size:12px;
   text-decoration:none;
   color: rgba(0,0,0,.7);
@@ -102,14 +103,13 @@
   transition:all 0.3s ease-in-out;
   
 }
-.navbarItem:hover::after{
+.navbarItem:hover::after,
+.navbarItem.active::after {
   transform:scale3d(1,1,1);
   /*鼠标經過時還原到正常比例*/
 }
 
-.active{
-  background-color:skyblue;
-}
+
 
 
 
@@ -155,7 +155,6 @@
   background-size:cover;
   background-position:center;
   height:100vh;
-  margin-bottom:9em;
   z-index:-1;
   overflow: hidden
 }
@@ -460,7 +459,6 @@
 }
 /**********contact************/
 #contactContainer{
-  
   padding-bottom:9em;
   padding-left:2.5em;
   padding-right:2.5em;
