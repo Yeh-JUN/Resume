@@ -33,7 +33,7 @@ $(document).ready(function() {
         /* If the object is completely visible in the window, fade it it */
         if( bottom_of_window > bottom_of_object ){
           $(this).animate({
-            'margin-left':'0px',
+            'left':'0px',
             'opacity':'1'
           },1000); 
         } 
@@ -45,7 +45,7 @@ $(document).ready(function() {
       /* If the object is completely visible in the window, fade it it */
       if( bottom_of_window > bottom_of_object ){
         $(this).animate({
-          'margin-right':'0px',
+          'right':'0px',
           'opacity':'1'
         },1000); 
       } 
