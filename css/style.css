@@ -60,13 +60,14 @@
   text-align:center;
 }
 .navbarItems{
-  line-height:2em;
+  line-height:30px;
   font-size:15px;
   font-weight:500;
   letter-spacing:1px;
   text-transform:uppercase;
 }
 .navbarItem{
+  
   font-size:12px;
   text-decoration:none;
   color: rgba(0,0,0,.7);
@@ -102,13 +103,11 @@
   transition:all 0.3s ease-in-out;
   
 }
-.navbarItem:hover::after{
+.navbarItem:hover::after,
+.navbarItem.active::after {
   transform:scale3d(1,1,1);
   /*鼠标經過時還原到正常比例*/
 }
-
-
-
 
 /*
 .navbarItem:hover{
@@ -152,7 +151,6 @@
   background-size:cover;
   background-position:center;
   height:100vh;
-  margin-bottom:9em;
   z-index:-1;
   overflow: hidden
 }
@@ -180,9 +178,6 @@
   }
 }
 
-
-
-
 .greeting{
   position:relative;
   top:18%;
@@ -199,7 +194,7 @@
 }
 
 .greetingTextTwo{
-  font-size: 2em;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.5;
   margin-bottom: 30px;
@@ -208,7 +203,7 @@
 
 .smallTitle{
   text-transform:uppercase;
-  margin-bottom:15px;
+  padding-bottom:15px;
   font-size:10px;
   font-weight:500;
   letter-spacing:5px;
@@ -217,7 +212,7 @@
 
 .bigTitle{
   text-transform:uppercase;
-  margin-bottom:4em;
+  padding-bottom:35px;
   font-size:18px;
   font-weight:700;
   letter-spacing:5px;
@@ -252,14 +247,14 @@
 /***************persinal**************/
 
 #personalContainer{
-  padding-bottom:9em;
-  padding-left:2.5em;
-  padding-right:2.5em;
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:120px;
 }
 
 .personalTextOne , .personalTextTwo , .personalTextThree , 
 .personalTextFour , .personalTextFive , .personalTextSix{
-  margin-bottom:1.5em;
+  margin-bottom:30px;
   font-size: 18px;
   font-weight: 700;
   color: rgba(0,0,0,.7);
@@ -268,9 +263,9 @@
 
 /**************education***************/
 #educationContainer{
-  padding-bottom:9em;
-  padding-left:2.5em;
-  padding-right:2.5em;
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:120px;
 }
 .universityA , .highSchoolA , .juniorHighA , .elementaryA{
   text-decoration:none;
@@ -288,8 +283,9 @@
 }
 
 .universityBody , .highSchoolBody , .juniorHighBody , .elementaryBody{
-  padding: 1.5em;
-  margin-top: 5px;
+  padding:30px;
+  margin-top:3px;
+  margin-bottom:5px;
   border: 1px solid #e6e6e6!important;
 }
 
@@ -309,9 +305,9 @@
 
 /**************experience**************/
 #experienceContainer{
-  padding-bottom:9em;
-  padding-left:2.5em;
-  padding-right:2.5em;
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:120px;
 }
 
 .circle{
@@ -337,8 +333,8 @@
 
 .workFirstContainer,.workSecondContainer,.workThirdContainer{
   background: #f2f3f7;
-  padding: 1.5em;
-  margin-bottom:1em;
+  padding:30px;
+  margin-bottom:20px;
 }
 
 .firstTitle,.secondTitle,.thirdTitle{
@@ -372,9 +368,9 @@
 
 /**************skills*****************/
 #skillsContainer{
-  padding-bottom:9em;
-  padding-left:2.5em;
-  padding-right:2.5em;
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:120px;
 }
 
 .skillTitle{
@@ -396,8 +392,8 @@
 
 .htmlSpan{
   position:relative;
-  top:-3em;
-  left:1em;
+  top:-40px;
+  left:15px;
 }
 
 .cssProgress{
@@ -410,8 +406,8 @@
 
 .cssSpan{
   position:relative;
-  top:-3em;
-  left:1em;
+  top:-40px;
+  left:15px;
 }
 
 .jsProgress{
@@ -424,8 +420,8 @@
 
 .jsSpan{
   position:relative;
-  top:-3em;
-  left:1em;
+  top:-40px;
+  left:15px;
 }
 
 .jqProgress{
@@ -438,8 +434,8 @@
 
 .jqSpan{
   position:relative;
-  top:-3em;
-  left:1em;
+  top:-40px;
+  left:15px;
 }
 
 .gitProgress{
@@ -452,15 +448,15 @@
 
 .gitSpan{
   position:relative;
-  top:-3em;
-  left:1em;
+  top:-40px;
+  left:15px;
 }
 /**********contact************/
 #contactContainer{
-  
-  padding-bottom:9em;
-  padding-left:2.5em;
-  padding-right:2.5em;
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:150px;
+  padding-bottom:200px;
 }
 
 .contactDataContainer{
@@ -474,12 +470,12 @@
 }
 
 .emailContainer,.placeContainer,.phoneContainer{
-  margin-bottom:2em;
+  margin-bottom:35px;
 }
 
 .figure{
-  margin-right:1em;
-  padding:1em;
+  margin-right:20px;
+  padding:25px;
   display:inline-block;
   background:#f2f3f7;
   color:#00B0FF;
@@ -525,7 +521,7 @@
 }
 
 .footer{
-  font-size:3em;
+  font-size:50px;
   text-align:center;
 }
 

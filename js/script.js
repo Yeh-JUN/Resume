@@ -17,6 +17,24 @@ elementaryBody.setAttribute('style', 'display: none;');
 /**隱藏元素**/
 
 
+var activeId = null;
+$(window).bind('scroll', function() {
+  var currentTop = $(window).scrollTop();
+  var elems = $('.scrollspy');
+  elems.each(function(index){
+    var id = $(this).attr('id');
+    var elemTop = $(this).offset().top;
+    var elemBottom	= elemTop + $(this).height();
+    if(currentTop >= elemTop && currentTop <= elemBottom && activeId !== id){
+      activeId = id;
+      var navElem = $('a[href="#' + id+ '"]');
+      var navElems = $('.navbarItem');
+      navElems.removeClass( 'active' );
+      navElem.addClass('active');
+    }
+  })
+}); 
+
 
 /**內容動畫效果(personal)**/
 $(document).ready(function() {
