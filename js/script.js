@@ -17,6 +17,7 @@ elementaryBody.setAttribute('style', 'display: none;');
 /**隱藏元素**/
 
 
+/**導覽列跟隨**/
 var activeId = null;
 $(window).bind('scroll', function() {
   var currentTop = $(window).scrollTop();
@@ -33,14 +34,15 @@ $(window).bind('scroll', function() {
       navElem.addClass('active');
     }
   })
-}); 
+});
+/**導覽列跟隨**/
 
 
 /**內容動畫效果(personal)**/
 $(document).ready(function() {
-  
   /* Every time the window is scrolled ... */
   $(window).scroll(function(){
+    
     $('.aboutMove').each( function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -61,7 +63,7 @@ $(document).ready(function() {
           $(this).animate({
             'left':'0px',
             'opacity':'1'
-          },1000); 
+          },300); 
         } 
     });
     /* Check the location of each desired element */
@@ -73,9 +75,80 @@ $(document).ready(function() {
         $(this).animate({
           'right':'0px',
           'opacity':'1'
-        },1000); 
+        },300); 
       } 
-  });
+    });
+    $('.htmlProgress').each( function(i){
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      /* If the object is completely visible in the window, fade it it */
+      if( bottom_of_window > bottom_of_object ){
+        $(this).animate({
+          'width':'75%'
+        },500, function(){
+          $('.htmlPro').animate({
+            'opacity':'1'
+          },100);
+        }); 
+      }
+    });
+    
+    $('.cssProgress').each( function(i){
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      /* If the object is completely visible in the window, fade it it */
+      if( bottom_of_window > bottom_of_object ){
+        $(this).animate({
+          'width':'80%'
+        },500 , function(){
+          $('.cssPro').animate({
+            'opacity':'1'
+          },100);
+        }); 
+      }
+    });
+    $('.jsProgress').each( function(i){
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      /* If the object is completely visible in the window, fade it it */
+      if( bottom_of_window > bottom_of_object ){
+        $(this).animate({
+          'width':'65%'
+        },500 , function(){
+          $('.jsPro').animate({
+            'opacity':'1'
+          },100);
+        }); 
+      }
+    });
+    $('.jqProgress').each( function(i){
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      /* If the object is completely visible in the window, fade it it */
+      if( bottom_of_window > bottom_of_object ){
+        $(this).animate({
+          'width':'60%'
+        },500, function(){
+          $('.jqPro').animate({
+            'opacity':'1'
+          },100);
+        }); 
+      }
+    });
+    $('.gitProgress').each( function(i){
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      /* If the object is completely visible in the window, fade it it */
+      if( bottom_of_window > bottom_of_object ){
+        $(this).animate({
+          'width':'45%'
+        },500 , function(){
+          $('.gitPro').animate({
+            'opacity':'1'
+          },100);
+        }); 
+      }
+    });
   });
 });
 /**內容動畫效果(personal)**/
@@ -173,8 +246,6 @@ function changeSecond(){
 }
 /***頁面點擊切換效果****/
 
-
-
 /*****自動切換首頁內容*****/
 var currentText = 0;
 function changeText(){
@@ -191,7 +262,6 @@ function changeText(){
   }
 }
 setInterval('changeText()' , 10000);
-
 /**自動切換首頁內容背景**/
 var currentIndex = 0;
 function changeBg(){
@@ -215,38 +285,7 @@ function changeBg(){
 }
 setInterval('changeBg()',10000);
 
-/******************************* 
-var currentIndex = 1; 
-var changeImgs = [    
-  "imgs/Duncan-2.png",
-  "imgs/Duncan-3.png",
-  "imgs/Duncan-4.png",
-  "imgs/Duncan-5.png"
-];
-function changeBg(){
-  var mainBg = document.getElementById('mainContainer');
-  mainBg.style.background = "url(" + changeImgs[currentIndex] + ")";
-  currentIndex++;
-  if(currentIndex >= changeImgs.lenght){
-    currentIndex=0;
-    mainBg.style.background = "url(" + changeImgs[currentIndex]  + ")";
-  }
-}
-setInterval('changeBg()',1000);
-*******************************/
 
-/*這段程式碼因為邏輯不對所以不會執行
-function changeBg(){
-  var mainBg = document.getElementById('mainContainer'); 
-    //取id為mainContainer的元素儲存到變數mainBg
-    mainBg.style.background= "url(" + changeImgs[currentIndex] + ")";
-    //main的style:background的值 為url(changeImgs[currentIndex])
-    currentIndex++;
-  if(currentIndex >= changeImgs.lenght-1){  
-    currentIndex=0;
-  }
-}
-*/
 
 /**切換首頁內容**/
 
@@ -343,14 +382,30 @@ var juniButton = document.querySelector('.juniorHighA');
 juniButton.addEventListener('click' , juniDisplay);
 
 function juniDisplay(){
-  /*
-  var uniButton=document.querySelector('.universityA');//先定義儲存變數
-  if(uniButton.style.background ='#f2f3f7'){
-    uniButton.style.background ='#2c98f0';
-  }else{
-    uniButton.style.background ='#f2f3f7';
+  var changeColor =[
+    "#f2f3f7",
+    "skyblue"
+  ];
+  var changeTextColor =[
+    "#333",
+    "#fff"
+  ];
+
+  var eduBg='';
+  var eduBg = document.querySelector('.juniorHighA');
+  var changeFas = document.getElementById('juniFas');
+  if(eduBg.style.background === changeColor[0]){
+    eduBg.style.background = changeColor[1];
+  } else if(eduBg.style.background === changeColor[1]){
+    eduBg.style.background = changeColor[0];
+    eduBg.style.color = changeTextColor[0];
+    changeFas.setAttribute('class' , ' fas fa-plus');
+  } else{
+    eduBg.style.background = changeColor[1];
+    eduBg.style.color = changeTextColor[1];
+    changeFas.setAttribute('class' , ' fas fa-minus');
   }
-  */
+
   var juniBody = document.querySelector('.juniorHighBody');
   if(juniBody.style.display==='none'){
     juniBody.style.display='';
@@ -369,14 +424,30 @@ var elemButton = document.querySelector('.elementaryA');
 elemButton.addEventListener('click' , elemDisplay);
 
 function elemDisplay(){
-  /*
-  var uniButton=document.querySelector('.universityA');//先定義儲存變數
-  if(uniButton.style.background ='#f2f3f7'){
-    uniButton.style.background ='#2c98f0';
-  }else{
-    uniButton.style.background ='#f2f3f7';
+  var changeColor =[
+    "#f2f3f7",
+    "skyblue"
+  ];
+  var changeTextColor =[
+    "#333",
+    "#fff"
+  ];
+
+  var eduBg='';
+  var eduBg = document.querySelector('.elementaryA');
+  var changeFas = document.getElementById('elemFas');
+  if(eduBg.style.background === changeColor[0]){
+    eduBg.style.background = changeColor[1];
+  } else if(eduBg.style.background === changeColor[1]){
+    eduBg.style.background = changeColor[0];
+    eduBg.style.color = changeTextColor[0];
+    changeFas.setAttribute('class' , ' fas fa-plus');
+  } else{
+    eduBg.style.background = changeColor[1];
+    eduBg.style.color = changeTextColor[1];
+    changeFas.setAttribute('class' , ' fas fa-minus');
   }
-  */
+
   var elemBody = document.querySelector('.elementaryBody');
   if(elemBody.style.display==='none'){
     elemBody.style.display='';
@@ -385,28 +456,6 @@ function elemDisplay(){
   }
 }
 
-
-/*
-$(document).ready(function(){
-  hidden();
-  $("a").click(function(event){
-    event.preventDefault();
-  });
-});
-
-$('.universityA').on('click',function(){
-  $('.universityBody').toggle();
-});
-
-$('.highSchoolA').on('click',function(){
-  $('.highSchoolBody').toggle();
-});
-
-function hidden(){
-  $('.universityBody').hide();
-  $('.highSchoolBody').hide();
-}
-*/
 
 
 

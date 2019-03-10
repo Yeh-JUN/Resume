@@ -152,7 +152,7 @@
   background-position:center;
   height:100vh;
   z-index:-1;
-  overflow: hidden
+  
 }
 /**iphone(320px)**/
 @media (max-width:569px) {
@@ -376,80 +376,147 @@
 .skillTitle{
   padding-top:30px;
   padding-bottom:10px;
-  border-bottom:  #e6e6e6 7px solid;
+  border-bottom:  #e6e6e6 10px solid;
   width:100%;
   text-align:left;
   font-weight: 700;
 }
 
 .htmlProgress{
-  width:75%;
-  border-top:#FDD835 7px solid;
+  width:0%;/*75*/
+  height:0;
+  border-top:#FDD835 5px solid;
+  border-bottom: #FDD835 5px solid;
+  border-radius: 12px;
   position: relative;
-  top:-7px;
+  top:-10px;
   text-align:right;
 }
-
 .htmlSpan{
-  position:relative;
-  top:-40px;
-  left:15px;
+  color:#FDD835;
+  position:absolute;
+  left:75%;
+}
+
+
+.htmlCircle{
+  display: inline-block;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: #FDD835;
+  position: absolute;
+  left: 73%;
+  bottom: 8.5px;
+}
+
+.htmlPro , .cssPro , .jsPro , .jqPro , .gitPro{
+  opacity:0;
 }
 
 .cssProgress{
-  width:80%;
-  border-top:#8E24AA 7px solid;
+  width:0%;/*80*/
+  height:0;
+  border-top:#8E24AA 5px solid;
+  border-bottom:#8E24AA 5px solid;
+  border-radius: 12px;
   position: relative;
-  top:-7px;
+  top:-10px;
   text-align:right;
 }
-
 .cssSpan{
-  position:relative;
-  top:-40px;
-  left:15px;
+  color:#8E24AA;
+  position:absolute;
+  left:80%;
+}
+
+.cssCircle{
+  display:inline-block;
+  border-radius:50%;
+  height:15px;
+  width:15px;
+  background-color:#8E24AA;
+  position: absolute;
+  left:78.5%;
+  bottom:8.5px;
 }
 
 .jsProgress{
-  width:65%;
-  border-top:#00E676 7px solid;
+  width:0%;/*65*/
+  height:0;
+  border-top:#00E676 5px solid;
+  border-bottom:#00E676 5px solid;
+  border-radius: 12px;
   position: relative;
-  top:-7px;
+  top:-10px;
   text-align:right;
 }
-
 .jsSpan{
-  position:relative;
-  top:-40px;
-  left:15px;
+  color:#00E676;
+  position:absolute;
+  left:65%;
+}
+.jsCircle{
+  display:inline-block;
+  border-radius:50%;
+  height:15px;
+  width:15px;
+  background-color: #00E676;
+  position:absolute;
+  left:63%;
+  bottom: 8.5px;
 }
 
 .jqProgress{
-  width:60%;
-  border-top:#FB8C00 7px solid;
+  width:0%;/*60*/
+  height:0;
+  border-top:#FB8C00 5px solid;
+  border-bottom:#FB8C00 5px solid;
+  border-radius: 12px;
   position: relative;
-  top:-7px;
+  top:-10px;
   text-align:right;
 }
-
 .jqSpan{
-  position:relative;
-  top:-40px;
-  left:15px;
+  color:#FB8C00;
+  position:absolute;
+  left:60%;
+}
+.jqCircle{
+  display:inline-block;
+  border-radius: 50%;
+  height:15px;
+  width:15px;
+  background-color:#FB8C00;
+  position: absolute;
+  left:58.5%;
+  bottom: 8.5px;
 }
 
 .gitProgress{
-  width:45%;
-  border-top:#2979FF 7px solid;
+  width:0%;/*45*/
+  height:0;
+  border-top:#2979FF 5px solid;
+  border-bottom:#2979FF 5px solid;
+  border-radius: 12px;
   position: relative;
-  top:-6px;
+  top:-10px;
   text-align:right;
 }
-
 .gitSpan{
-  position:relative;
-  top:-40px;
-  left:15px;
+  color:#2979FF;
+  position:absolute;
+  left:45%;
+}
+.gitCircle{
+  display:inline-block;
+  border-radius:50%;
+  height:15px;
+  width:15px;
+  background-color:#2979FF;
+  position: absolute;
+  left:43%;
+  bottom: 8.5px;
 }
 /**********contact************/
 #contactContainer{
@@ -638,4 +705,6 @@
   padding-top:300px;
   opacity:0;
 }
+
+
 /**animate**/
