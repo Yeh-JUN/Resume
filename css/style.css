@@ -311,7 +311,7 @@
   color:#fff;
   height:40px;
   width:40px;
-  border:5px solid #ddd0ce;
+  border:5px solid  #f2f3f7;
   border-radius: 50%;
   text-align:center;
 }
@@ -342,14 +342,15 @@
 .arrow{
   position:absolute;
   left:4.6%;
-  top:-16%;
-  border-top:20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 20px solid #f2f3f7;
+  top:-18.5%;
+  border-top:10px solid transparent;
+  border-bottom:10px solid transparent;
+  border-right:15px solid #f2f3f7;
 }
 
 .firstTitle,.secondTitle,.thirdTitle{
   font-family: Arial,sans-serif;
+  padding-bottom: 20px;
 }
 
 .workPosition{
