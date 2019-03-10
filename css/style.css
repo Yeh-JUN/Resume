@@ -398,6 +398,7 @@
   left:75%;
 }
 
+
 .htmlCircle{
   display: inline-block;
   border-radius: 50%;
@@ -407,6 +408,10 @@
   position: absolute;
   left: 73%;
   bottom: 8.5px;
+}
+
+.htmlPro , .cssPro , .jsPro , .jqPro , .gitPro{
+  opacity:0;
 }
 
 .cssProgress{
@@ -432,7 +437,7 @@
   width:15px;
   background-color:#8E24AA;
   position: absolute;
-  left:78%;
+  left:78.5%;
   bottom:8.5px;
 }
 
@@ -484,7 +489,7 @@
   width:15px;
   background-color:#FB8C00;
   position: absolute;
-  left:58%;
+  left:58.5%;
   bottom: 8.5px;
 }
 

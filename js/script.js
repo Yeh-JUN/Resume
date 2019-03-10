@@ -63,7 +63,7 @@ $(document).ready(function() {
           $(this).animate({
             'left':'0px',
             'opacity':'1'
-          },500); 
+          },300); 
         } 
     });
     /* Check the location of each desired element */
@@ -75,7 +75,7 @@ $(document).ready(function() {
         $(this).animate({
           'right':'0px',
           'opacity':'1'
-        },500); 
+        },300); 
       } 
     });
     $('.htmlProgress').each( function(i){
@@ -85,7 +85,11 @@ $(document).ready(function() {
       if( bottom_of_window > bottom_of_object ){
         $(this).animate({
           'width':'75%'
-        },600); 
+        },500, function(){
+          $('.htmlPro').animate({
+            'opacity':'1'
+          },100);
+        }); 
       }
     });
     
@@ -96,7 +100,11 @@ $(document).ready(function() {
       if( bottom_of_window > bottom_of_object ){
         $(this).animate({
           'width':'80%'
-        },600); 
+        },500 , function(){
+          $('.cssPro').animate({
+            'opacity':'1'
+          },100);
+        }); 
       }
     });
     $('.jsProgress').each( function(i){
@@ -106,7 +114,11 @@ $(document).ready(function() {
       if( bottom_of_window > bottom_of_object ){
         $(this).animate({
           'width':'65%'
-        },600); 
+        },500 , function(){
+          $('.jsPro').animate({
+            'opacity':'1'
+          },100);
+        }); 
       }
     });
     $('.jqProgress').each( function(i){
@@ -116,7 +128,11 @@ $(document).ready(function() {
       if( bottom_of_window > bottom_of_object ){
         $(this).animate({
           'width':'60%'
-        },600); 
+        },500, function(){
+          $('.jqPro').animate({
+            'opacity':'1'
+          },100);
+        }); 
       }
     });
     $('.gitProgress').each( function(i){
@@ -126,7 +142,11 @@ $(document).ready(function() {
       if( bottom_of_window > bottom_of_object ){
         $(this).animate({
           'width':'45%'
-        },600); 
+        },500 , function(){
+          $('.gitPro').animate({
+            'opacity':'1'
+          },100);
+        }); 
       }
     });
   });
