@@ -92,8 +92,8 @@ function changeFirst(){
     "Constant Learning"
   ];
   var changeImgs = [    
-    "imgs/Duncan-2.png",
-    "imgs/Duncan-4.png"
+    "imgs/joshua-earle-1420452-unsplash.jpg",
+    "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
   ];
   var elTextFirst = document.getElementById('greetingTextOne');
   var elImgFirst = document.getElementById('mainContainer');
@@ -105,7 +105,7 @@ function changeFirst(){
       function(){
         $(elTextFirst).animate({
           opacity: 1
-      },1500);
+      },100);
       elTextFirst.textContent = changeText[0];
     });
     }else{
@@ -115,11 +115,11 @@ function changeFirst(){
   if(elImgFirst.style.background = changeImgs[1]){
     $(elImgFirst).animate({
       opacity:0
-    },300,
+    },100,
       function(){
         $(elImgFirst).animate({
           opacity:1
-      },1500);
+      },300);
       elImgFirst.style.background = "url(" + changeImgs[0] + " )";
       document.getElementById('mainContainer').style.backgroundSize = 'cover';
       document.getElementById('mainContainer').style.backgroundPosition ='center';
@@ -135,8 +135,8 @@ function changeSecond(){
     "Constant Learning"
   ];
   var changeImgs = [    
-    "imgs/Duncan-2.png",
-    "imgs/Duncan-4.png"
+    "imgs/joshua-earle-1420452-unsplash.jpg",
+    "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
   ];
   var elTextSecond = document.getElementById('greetingTextOne');
   var elImgSecond = document.getElementById('mainContainer')
@@ -148,7 +148,7 @@ function changeSecond(){
       function(){
         $(elTextSecond).animate({
           opacity: 1
-      },1500);
+      },100);
       elTextSecond.textContent = changeText[1];
     });
     }else{
@@ -162,7 +162,7 @@ function changeSecond(){
       function(){
         $(elImgSecond).animate({
           opacity:1
-        },1500);
+        },100);
         elImgSecond.style.background = "url(" + changeImgs[1] + " )";
         document.getElementById('mainContainer').style.backgroundSize = 'cover';
         document.getElementById('mainContainer').style.backgroundPosition ='center';
@@ -196,8 +196,8 @@ setInterval('changeText()' , 10000);
 var currentIndex = 0;
 function changeBg(){
   var changeImgs = [    
-    "imgs/Duncan-2.png",
-    "imgs/Duncan-4.png"
+    "imgs/joshua-earle-1420452-unsplash.jpg",
+    "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
   ];
   currentIndex++;
   currentIndex%=2;  
