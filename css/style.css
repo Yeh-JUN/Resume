@@ -185,7 +185,6 @@
   z-index:2;
 }
 
-
 .greetingTextOne{
   font-size:60px;
   font-weight:700;
@@ -239,13 +238,10 @@
   cursor:pointer;
   background-color:rgb(216, 186, 16);
 }
-
-
 /*****************main******************/
 
 
 /***************persinal**************/
-
 #personalContainer{
   padding-left:50px;
   padding-right:50px;
@@ -300,7 +296,6 @@
   font-weight: 600;
   color: rgba(0,0,0,.7);
 }
-
 /**************education***************/
 
 /**************experience**************/
@@ -316,11 +311,9 @@
   color:#fff;
   height:40px;
   width:40px;
-  border:5px solid #ddd0ce;
+  border:5px solid  #f2f3f7;
   border-radius: 50%;
   text-align:center;
-  
-  margin-bottom:1em;
 }
 
 .circleSecond{
@@ -331,14 +324,33 @@
   background-color:#f9bf3f;
 }
 
+.lineBlock{
+  position:relative;
+  right:-17px;
+  padding-left:50px;
+  height:160px;
+  border-left:#f2f3f7 5px solid;
+}
+
 .workFirstContainer,.workSecondContainer,.workThirdContainer{
   background: #f2f3f7;
   padding:30px;
-  margin-bottom:20px;
+  position: relative;
+  bottom: 23%;
+}
+
+.arrow{
+  position:absolute;
+  left:4.6%;
+  top:-18.5%;
+  border-top:10px solid transparent;
+  border-bottom:10px solid transparent;
+  border-right:15px solid #f2f3f7;
 }
 
 .firstTitle,.secondTitle,.thirdTitle{
   font-family: Arial,sans-serif;
+  padding-bottom: 20px;
 }
 
 .workPosition{
@@ -358,6 +370,14 @@
   color: rgba(0,0,0,.7);
   font-weight: 700;
   line-height: 1.8;
+}
+
+.spaceCircle{
+  height:40px;
+  width:40px;
+  background-color:transparent;
+  border-radius:50%;
+  border:5px solid #f2f3f7;
 }
 /**************experience**************/
 
