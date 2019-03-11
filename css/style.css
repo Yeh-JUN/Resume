@@ -538,6 +538,32 @@
   left:43%;
   bottom: 8.5px;
 }
+/**************skills*****************/
+
+/**************works*****************/
+#worksContainer{
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:120px;
+}
+
+.worksFirstContainer, .worksSecondContainer{
+  float:left;
+}
+
+.worksThirdContainer, .worksFourthContainer{
+  float:left;
+}
+
+
+.floatClear{
+  clear:both;
+}
+/**************works*****************/
+
+
+
+
 /**********contact************/
 #contactContainer{
   padding-left:50px;
