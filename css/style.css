@@ -134,6 +134,9 @@
 /*****************navbar****************/
 
 /*****************main******************/
+.aboutRandow{
+  filter:drop-shadow(5px 5px 5px #333);
+}
 
 #mainContainer:after{
   content: "";
@@ -418,7 +421,6 @@
   left:75%;
 }
 
-
 .htmlCircle{
   display: inline-block;
   border-radius: 50%;
@@ -544,20 +546,40 @@
 #worksContainer{
   padding-left:50px;
   padding-right:50px;
-  padding-top:120px;
+  padding-top:150px;
+}
+
+.worksTitle{
+  padding-bottom:28px;
+  font-size:15px;
+  font-weight:700;
 }
 
 .worksFirstContainer, .worksSecondContainer{
   float:left;
 }
 
+.firstItem,.secondItem,.thirdItem,.fourItem{
+  padding-right:50px;
+  padding-bottom:50px;
+}
+
 .worksThirdContainer, .worksFourthContainer{
   float:left;
 }
 
-
 .floatClear{
   clear:both;
+}
+
+.filter{
+  filter:drop-shadow(5px 5px 5px #333);
+}
+
+.hoverAnimate:hover{
+  filter:contrast(1.2);
+  transition: all 0.1s ease-out;
+  transform:scale(1.2);
 }
 /**************works*****************/
 
