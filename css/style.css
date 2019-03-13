@@ -134,7 +134,6 @@
 /*****************navbar****************/
 
 /*****************main******************/
-
 #mainContainer:after{
   content: "";
   position: absolute;;
@@ -418,7 +417,6 @@
   left:75%;
 }
 
-
 .htmlCircle{
   display: inline-block;
   border-radius: 50%;
@@ -538,6 +536,170 @@
   left:43%;
   bottom: 8.5px;
 }
+/**************skills*****************/
+
+/**************works*****************/
+#worksContainer{
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:150px;
+}
+
+.worksFirstContainer{
+  background-image:url(../imgs/work1-1.jpg);
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin-bottom:30px;
+  position:relative;
+  margin-right:25px;
+}
+.worksSecondContainer{
+  background-image:url(../imgs/work2-1.jpg);
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin-bottom:30px;
+  position:relative;
+}
+.worksThirdContainer{
+  background-image:url(../imgs/work3-5.jpg);
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin-bottom:30px;
+  position:relative;
+}
+.worksFourthContainer{
+  background-image:url(../imgs/work4-2.jpg);
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin-bottom:30px;
+  position:relative;
+}
+
+.firstItem,.secondItem,.thirdItem,.fourthItem{
+  width:95%;
+  margin:0 auto;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  opacity:0;
+}
+.firstA,.secondA,.thirdA,.fourthA{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  letter-spacing:1px;
+  font-weight:700;
+  padding:5px 5px;
+  position:absolute;
+  top:1%;
+}
+.firstText,.secondText,.thirdText,.fourthText{
+  padding:0px 5px;
+  font-size:10px;
+  color:rgba(255, 255, 255, 0.7);
+  position:absolute;
+  top:20%;
+}
+
+.worksFirstContainer:hover{
+  background:#2c98f0;
+}
+.worksSecondContainer:hover{
+  background:#2c98f0;
+}
+.worksThirdContainer:hover{
+  background:#2c98f0;
+}
+.worksFourthContainer:hover{
+  background:#2c98f0;
+}
+.worksFirstContainer:hover .firstItem{
+  opacity:1;
+}
+.worksFirstContainer:hover .firstA{
+  position:absolute;
+  top:4%;
+  transition:0.5s;
+}
+.worksFirstContainer:hover .firstText{
+  position:absolute;
+  top:17%;
+  transition:0.5s;
+}
+
+.worksSecondContainer:hover .secondItem{
+  opacity:1;
+}
+.worksSecondContainer:hover .secondA{
+  position:absolute;
+  top:4%;
+  transition:0.5s;
+}
+.worksSecondContainer:hover .secondText{
+  position:absolute;
+  top:17%;
+  transition:0.5s;
+}
+
+.worksThirdContainer:hover .thirdItem{
+  opacity:1;
+}
+.worksThirdContainer:hover .thirdA {
+  position:absolute;
+  top:4%;
+  transition:0.5s;
+}
+.worksThirdContainer:hover .thirdText{
+  position:absolute;
+  top:17%;
+  
+}
+
+.worksFourthContainer:hover .fourthItem{
+  opacity:1;
+}
+.worksFourthContainer:hover .fourthA{
+  position:absolute;
+  top:4%;
+  transition:0.5s;
+}
+.worksFourthContainer:hover .fourthText{
+  position:absolute;
+  top:17%;
+  transition:0.5s;
+}
+
+.worksThirdContainer{
+  margin-right:30px;
+}
+.worksThirdContainer, .worksFourthContainer{
+  float:left;
+}
+.floatClear{
+  clear:both;
+}
+
+.share,.eye,.love{
+  display:inline-block;
+  font-size: 13px;
+  letter-spacing:2px;
+  margin: 0 3px;
+  color:#333333;
+  padding:2px 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  position:relative;
+  top:70%;
+}
+/**************works*****************/
+
+
 /**********contact************/
 #contactContainer{
   padding-left:50px;
