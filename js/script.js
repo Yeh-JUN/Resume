@@ -199,17 +199,11 @@ function changeFirst(){
     };
     /**切換圖片**/
   if(elImgFirst.style.background = changeImgs[1]){
-    $(elImgFirst).animate({
-      opacity:0
-    },100,
-      function(){
-        $(elImgFirst).animate({
-          opacity:1
-      },100);
+    
       elImgFirst.style.background = "url(" + changeImgs[0] + " )";
       document.getElementById('mainContainer').style.backgroundSize = 'cover';
       document.getElementById('mainContainer').style.backgroundPosition ='center';
-    });
+    
     }else{
       elImgFirst.style.background = "url("+ changeImgs[0] + ")";
     };
@@ -226,7 +220,7 @@ function changeSecond(){
   ];
   var elTextSecond = document.getElementById('greetingTextOne');
   var elImgSecond = document.getElementById('mainContainer')
-  if(elTextSecond.textContent = changeText[0]){
+  if(elTextSecond.textContent === changeText[0]){
     /**切換文字**/
     $('#changeFirst').addClass('dotActive');
     $('#changeSecond').removeClass('dotActive');
@@ -244,17 +238,11 @@ function changeSecond(){
     }
     /**切換圖片**/
   if(elImgSecond.style.background = changeImgs[0]){
-    $(elImgSecond).animate({
-      opacity:0
-    },100,
-      function(){
-        $(elImgSecond).animate({
-          opacity:1
-        },300);
+    
         elImgSecond.style.background = "url(" + changeImgs[1] + " )";
         document.getElementById('mainContainer').style.backgroundSize = 'cover';
         document.getElementById('mainContainer').style.backgroundPosition ='center';
-      });
+      
     }else{
       elImgSecond.style.background = "url("+ changeImgs[1] + ")";
   }
