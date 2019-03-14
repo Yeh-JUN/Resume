@@ -308,7 +308,7 @@ uniButton.addEventListener('click' , uniDisplay);
 function uniDisplay(){
   var changeColor =[
     '#f2f3f7',
-    "skyblue"
+    'dodgerblue'
   ];
   var changeTextColor =[
     "#333",
@@ -348,7 +348,7 @@ highButton.addEventListener('click' , highDisplay);
 function highDisplay(){
   var changeColor =[
     "#f2f3f7",
-    "skyblue"
+    "dodgerblue"
   ];
   var changeTextColor =[
     "#333",
@@ -389,7 +389,7 @@ juniButton.addEventListener('click' , juniDisplay);
 function juniDisplay(){
   var changeColor =[
     "#f2f3f7",
-    "skyblue"
+    "dodgerblue"
   ];
   var changeTextColor =[
     "#333",
@@ -430,7 +430,7 @@ elemButton.addEventListener('click' , elemDisplay);
 function elemDisplay(){
   var changeColor =[
     "#f2f3f7",
-    "skyblue"
+    "dodgerblue"
   ];
   var changeTextColor =[
     "#333",
@@ -441,7 +441,7 @@ function elemDisplay(){
   var eduBg = document.querySelector('.elementaryA');
   var changeFas = document.getElementById('elemFas');
   if(eduBg.style.background === changeColor[0]){
-    eduBg.style.background = changeColor[1];
+    eduBg.style.background === changeColor[1];
   } else if(eduBg.style.background === changeColor[1]){
     eduBg.style.background = changeColor[0];
     eduBg.style.color = changeTextColor[0];
