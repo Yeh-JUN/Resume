@@ -348,9 +348,9 @@
   position:absolute;
   left:4.6%;
   top:-22%;
-  border-top:10px solid transparent;
-  border-bottom:10px solid transparent;
-  border-right:15px solid #f2f3f7;
+  border-top:9px solid transparent;
+  border-bottom:9px solid transparent;
+  border-right:9px solid #f2f3f7;
 }
 
 .firstTitle,.secondTitle,.thirdTitle{
