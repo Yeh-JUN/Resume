@@ -102,7 +102,7 @@
   height:1px;
   bottom:-2px;
   left:0px;
-  background:skyblue;
+  background:#2c98f0;
   transform: scale3d(0,1,1);
   /*通過transform的缩放scale来讓初始時x軸為0*/
   transform-origin:50% 0;
