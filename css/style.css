@@ -411,7 +411,7 @@
   border-bottom:  #e6e6e6 10px solid;
   width:100%;
   text-align:left;
-  font-weight: 700;
+  font-weight:400;
 }
 
 .htmlProgress{
@@ -420,7 +420,7 @@
   border-top:#FDD835 5px solid;
   border-bottom: #FDD835 5px solid;
   border-radius: 12px;
-  position: relative;
+  position:relative;
   top:-10px;
   text-align:right;
 }
@@ -454,6 +454,7 @@
   position: relative;
   top:-10px;
   text-align:right;
+  
 }
 .cssSpan{
   color:#8E24AA;
@@ -481,6 +482,7 @@
   position: relative;
   top:-10px;
   text-align:right;
+  
 }
 .jsSpan{
   color:#00E676;
@@ -507,6 +509,7 @@
   position: relative;
   top:-10px;
   text-align:right;
+  
 }
 .jqSpan{
   color:#FB8C00;
