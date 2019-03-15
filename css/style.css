@@ -642,11 +642,13 @@
 .worksFirstContainer:hover .firstA{
   position:absolute;
   top:4%;
+  left:4%;
   transition:0.5s;
 }
 .worksFirstContainer:hover .firstText{
   position:absolute;
   top:17%;
+  left:4%;
   transition:0.5s;
 }
 
@@ -656,11 +658,13 @@
 .worksSecondContainer:hover .secondA{
   position:absolute;
   top:4%;
+  left:4%;
   transition:0.5s;
 }
 .worksSecondContainer:hover .secondText{
   position:absolute;
   top:17%;
+  left:4%;
   transition:0.5s;
 }
 
@@ -670,12 +674,14 @@
 .worksThirdContainer:hover .thirdA {
   position:absolute;
   top:4%;
+  left:4%;
   transition:0.5s;
 }
 .worksThirdContainer:hover .thirdText{
   position:absolute;
   top:17%;
-  
+  left:4%;
+  transition:0.5s;
 }
 
 .worksFourthContainer:hover .fourthItem{
@@ -684,11 +690,13 @@
 .worksFourthContainer:hover .fourthA{
   position:absolute;
   top:4%;
+  left:4%;
   transition:0.5s;
 }
 .worksFourthContainer:hover .fourthText{
   position:absolute;
   top:17%;
+  left:4%;
   transition:0.5s;
 }
 
@@ -710,6 +718,7 @@
   border-radius: 4px;
   position:relative;
   top:70%;
+  left:5%
 }
 /**************works*****************/
 
