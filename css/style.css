@@ -152,7 +152,7 @@
 
 #mainContainer{
   display:block;
-  margin-bottom:140px;
+  margin-bottom:120px;
   background:url(../imgs/joshua-earle-1420452-unsplash.jpg) no-repeat;
   opacity:1;
   background-size:cover;
@@ -253,27 +253,27 @@
 
 /***************persinal**************/
 #personalContainer{
-  padding-left:50px;
-  padding-right:50px;
-  padding-top:50px;
-  padding-bottom:110px;
+  padding-left:40px;
+  padding-right:40px;
+  padding-top:65px;
+  padding-bottom:130px;
 }
 
 .personalTextOne , .personalTextTwo , .personalTextThree , 
 .personalTextFour , .personalTextFive , .personalTextSix{
-  margin-bottom:30px;
-  font-size: 18px;
-  font-weight: 700;
+  margin-bottom:25px;
+  font-size:18px;
+  font-weight:400;
   color: rgba(0,0,0,.7);
 }
 /***************persinal**************/
 
 /**************education***************/
 #educationContainer{
-  padding-left:50px;
-  padding-right:50px;
-  padding-top:50px;
-  padding-bottom:110px;
+  padding-left:40px;
+  padding-right:40px;
+  padding-top:65px;
+  padding-bottom:130px;
 }
 .universityA , .highSchoolA , .juniorHighA , .elementaryA{
   position:relative;
@@ -313,10 +313,10 @@
 
 /**************experience**************/
 #experienceContainer{
-  padding-left:50px;
-  padding-right:50px;
-  padding-top:50px;
-  padding-bottom:110px;
+  padding-left:40px;
+  padding-right:40px;
+  padding-top:65px;
+  padding-bottom:130px;
 }
 
 .circle{
@@ -408,10 +408,10 @@
 
 /**************skills*****************/
 #skillsContainer{
-  padding-left:50px;
-  padding-right:50px;
-  padding-top:50px;
-  padding-bottom:110px;
+  padding-left:40px;
+  padding-right:40px;
+  padding-top:65px;
+  padding-bottom:130px;
 }
 
 .skillTitle{
@@ -562,14 +562,14 @@
 
 /**************works*****************/
 #worksContainer{
-  padding-left:50px;
-  padding-right:50px;
-  padding-top:50px;
-  padding-bottom:110px;
+  padding-left:40px;
+  padding-right:40px;
+  padding-top:65px;
+  padding-bottom:130px;
 }
 
 .worksFirstContainer{
-  background-image:url(../imgs/work1-3.jpg);
+  background-image:url(../imgs/work1-final.jpg);
   height: 300px;
   width: 328.5px;
   display: inline-block;
@@ -578,7 +578,7 @@
   margin-right:25px;
 }
 .worksSecondContainer{
-  background-image:url(../imgs/work2-3.jpg);
+  background-image:url(../imgs/work2-final.jpg);
   height: 300px;
   width: 328.5px;
   display: inline-block;
@@ -586,7 +586,7 @@
   position:relative;
 }
 .worksThirdContainer{
-  background-image:url(../imgs/work3-3.jpg);
+  background-image:url(../imgs/work3-final.jpg);
   height: 300px;
   width: 328.5px;
   display: inline-block;
@@ -594,7 +594,7 @@
   position:relative;
 }
 .worksFourthContainer{
-  background-image:url(../imgs/work4-3.jpg);
+  background-image:url(../imgs/work4-final.jpg);
   height: 300px;
   width: 328.5px;
   display: inline-block;
@@ -725,8 +725,8 @@
 
 /**********contact************/
 #contactContainer{
-  padding-left:50px;
-  padding-right:50px;
+  padding-left:40px;
+  padding-right:40px;
   padding-top:150px;
   padding-bottom:200px;
 }
