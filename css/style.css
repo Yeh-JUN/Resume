@@ -775,6 +775,10 @@
   font-size: 16px;
   font-weight: 400;
 }
+.formControl:focus{
+  background: #f0f0f0;
+}
+
 .btn{
   color:#fff;
   border:2px solid #2c98f0;
