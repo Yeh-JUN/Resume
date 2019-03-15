@@ -355,7 +355,7 @@
 
 .firstTitle,.secondTitle,.thirdTitle{
   font-family: Arial,sans-serif;
-  margin:0 0 51px;
+  margin:0 0 30px;
 }
 
 .workPosition{
@@ -375,7 +375,7 @@
   color: rgba(0,0,0,.7);
   font-weight: 400;
   line-height: 1.8;
-  margin:0 0 19px;
+  margin:0 0 30.5px;
 }
 
 .spaceCircle{
