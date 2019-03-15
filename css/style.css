@@ -563,41 +563,41 @@
 }
 
 .worksFirstContainer{
-  background-image:url(../imgs/work1-final.jpg);
+  background-image:url(../imgs/work1-330.jpg);
   height: 300px;
-  width: 328.5px;
+  width: 330px;
   display: inline-block;
-  margin-bottom:30px;
+  margin:0 13px 0 0;
   position:relative;
-  margin-right:25px;
 }
 .worksSecondContainer{
-  background-image:url(../imgs/work2-final.jpg);
+  background-image:url(../imgs/work2-330.jpg);
   height: 300px;
-  width: 328.5px;
+  width: 330px;
+  margin:0 0 0 13px;
   display: inline-block;
-  margin-bottom:30px;
+  
   position:relative;
 }
 .worksThirdContainer{
-  background-image:url(../imgs/work3-final.jpg);
+  background-image:url(../imgs/work3-330.jpg);
   height: 300px;
-  width: 328.5px;
+  width: 330px;
   display: inline-block;
-  margin-bottom:30px;
+  margin:23px 15px 0 0;
   position:relative;
 }
 .worksFourthContainer{
-  background-image:url(../imgs/work4-final.jpg);
+  background-image:url(../imgs/work4-330.jpg);
   height: 300px;
-  width: 328.5px;
+  width: 330px;
   display: inline-block;
-  margin-bottom:30px;
+  margin:23px 0 0 15px;
   position:relative;
 }
 
 .firstItem,.secondItem,.thirdItem,.fourthItem{
-  width:95%;
+  width:100%;
   margin:0 auto;
   position:absolute;
   top:0;
@@ -692,9 +692,6 @@
   transition:0.5s;
 }
 
-.worksThirdContainer{
-  margin-right:30px;
-}
 .worksThirdContainer, .worksFourthContainer{
   float:left;
 }
