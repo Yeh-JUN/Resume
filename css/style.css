@@ -268,16 +268,16 @@
 .universityA , .highSchoolA , .juniorHighA , .elementaryA{
   position:relative;
   text-decoration:none;
-  background: #f2f3f7;
-  border: 1px solid #e6e6e6!important;
-  color: #333;
-  font-weight: 700;
-  font-size: 14px;
-  padding:20px 25px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  display: block;
+  background:#f2f3f7;
+  border:1px solid #e6e6e6!important;
+  color:#333;
+  font-weight:500;
+  font-size:14px;
+  padding:15px 25px;
+  margin-bottom:5px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  display:block;
   transition:all 0.1s ease-in;
 }
 
