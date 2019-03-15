@@ -79,13 +79,13 @@
 }
 
 .active{
-  color: #2c98f0;
+  color: #2c98f0!important;
 }
 
 /*底線效果part1(OK)*/
 
 .navbar a:active {
-  color:skyblue;
+  color:#2c98f0;
   text-decoration: none;
 }
 
@@ -110,27 +110,17 @@
   transition:all 0.3s ease-in-out;
   
 }
-.navbarItem:hover::after,
 .navbarItem.active::after {
   transform:scale3d(1,1,1);
   /*鼠标經過時還原到正常比例*/
 }
 
-/*
+.navbarItem:hover::after{
+  transform:scale3d(1,1,1);
+}
 .navbarItem:hover{
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0%;
-  border-bottom: 2px solid #3366FF;
-  transition: 0.4s;
+  color:#000;
 }
-
-.navbarItem:hover:after {
-  width: 100%;
-}
-*/
 
 .versionText{
   font-size:85%;
