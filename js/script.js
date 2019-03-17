@@ -89,8 +89,10 @@ $(document).ready(function() {
           $('.htmlPro').animate({
             'opacity':'1'
           },100);
+          document.querySelector('.htmlProgress').removeEventListener('scroll');
         }); 
       }
+      
     });
     
     $('.cssProgress').each( function(i){
@@ -104,6 +106,7 @@ $(document).ready(function() {
           $('.cssPro').animate({
             'opacity':'1'
           },100);
+          document.querySelector('.htmlProgress').removeEventListener('scroll');
         }); 
       }
     });
@@ -119,6 +122,7 @@ $(document).ready(function() {
           $('.jsPro').animate({
             'opacity':'1'
           },100);
+          document.querySelector('.htmlProgress').removeEventListener('scroll');
         }); 
       }
     });
@@ -134,6 +138,7 @@ $(document).ready(function() {
           $('.jqPro').animate({
             'opacity':'1'
           },100);
+          document.querySelector('.htmlProgress').removeEventListener('scroll');
         }); 
       }
     });
@@ -149,6 +154,7 @@ $(document).ready(function() {
           $('.gitPro').animate({
             'opacity':'1'
           },100);
+          document.querySelector('.htmlProgress').removeEventListener('scroll');
         }); 
       }
     });
