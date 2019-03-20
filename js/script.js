@@ -88,13 +88,13 @@ $(document).ready(function() {
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
       if( bottom_of_window > bottom_of_object && elHtml === 0 ){
+        elHtml = 1;
         $(this).animate({
           'width':'75%'
         },500, function(){
           $('.htmlPro').animate({
             'opacity':'1'
           },100);
-          elHtml = 1;
         }); 
       }
     });
@@ -104,13 +104,13 @@ $(document).ready(function() {
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
       if( bottom_of_window > bottom_of_object && elCss === 0){
+        elCss = 1;
         $(this).animate({
           'width':'80%'
         },500 , function(){
           $('.cssPro').animate({
             'opacity':'1'
           },100);
-          elCss = 1;
         }); 
       }
     });
@@ -120,13 +120,13 @@ $(document).ready(function() {
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
       if( bottom_of_window > bottom_of_object && elJs === 0){
+        elJs = 1;
         $(this).animate({
           'width':'65%'
         },500 , function(){
           $('.jsPro').animate({
             'opacity':'1'
           },100);
-          elJs = 1;
         }); 
       }
     });
@@ -136,13 +136,13 @@ $(document).ready(function() {
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
       if( bottom_of_window > bottom_of_object && elJq === 0){
+        elJq = 1;
         $(this).animate({
           'width':'60%'
         },500, function(){
           $('.jqPro').animate({
             'opacity':'1'
           },100);
-          elJq = 1;
         }); 
       }
     });
@@ -152,13 +152,13 @@ $(document).ready(function() {
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
       if( bottom_of_window > bottom_of_object && elGit === 0){
+        elGit = 1;
         $(this).animate({
           'width':'45%'
         },500 , function(){
           $('.gitPro').animate({
             'opacity':'1'
           },100);
-          elGit = 1;
         }); 
       }
     });
