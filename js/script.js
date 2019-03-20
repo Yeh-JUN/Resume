@@ -39,6 +39,11 @@ $(window).bind('scroll', function() {
 
 /***********************************************內容動畫效果(personal)**/
 $(document).ready(function() {
+  var elHtml = 0;
+  var elCss  = 0;
+  var elJs   = 0;
+  var elJq   = 0;
+  var elGit  = 0;
   /* Every time the window is scrolled ... */
   $(window).scroll(function(){
     
@@ -82,31 +87,30 @@ $(document).ready(function() {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
+      if( bottom_of_window > bottom_of_object && elHtml === 0 ){
         $(this).animate({
           'width':'75%'
         },500, function(){
           $('.htmlPro').animate({
             'opacity':'1'
           },100);
-          document.querySelector('.htmlProgress').removeEventListener('scroll');
+          elHtml = 1;
         }); 
       }
-      
     });
     
     $('.cssProgress').each( function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
+      if( bottom_of_window > bottom_of_object && elCss === 0){
         $(this).animate({
           'width':'80%'
         },500 , function(){
           $('.cssPro').animate({
             'opacity':'1'
           },100);
-          document.querySelector('.htmlProgress').removeEventListener('scroll');
+          elCss = 1;
         }); 
       }
     });
@@ -115,14 +119,14 @@ $(document).ready(function() {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
+      if( bottom_of_window > bottom_of_object && elJs === 0){
         $(this).animate({
           'width':'65%'
         },500 , function(){
           $('.jsPro').animate({
             'opacity':'1'
           },100);
-          document.querySelector('.htmlProgress').removeEventListener('scroll');
+          elJs = 1;
         }); 
       }
     });
@@ -131,14 +135,14 @@ $(document).ready(function() {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
+      if( bottom_of_window > bottom_of_object && elJq === 0){
         $(this).animate({
           'width':'60%'
         },500, function(){
           $('.jqPro').animate({
             'opacity':'1'
           },100);
-          document.querySelector('.htmlProgress').removeEventListener('scroll');
+          elJq = 1;
         }); 
       }
     });
@@ -147,14 +151,14 @@ $(document).ready(function() {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
+      if( bottom_of_window > bottom_of_object && elGit === 0){
         $(this).animate({
           'width':'45%'
         },500 , function(){
           $('.gitPro').animate({
             'opacity':'1'
           },100);
-          document.querySelector('.htmlProgress').removeEventListener('scroll');
+          elGit = 1;
         }); 
       }
     });
