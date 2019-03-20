@@ -39,6 +39,11 @@ $(window).bind('scroll', function() {
 
 /***********************************************內容動畫效果(personal)**/
 $(document).ready(function() {
+  var elHtml = 0;
+  var elCss  = 0;
+  var elJs   = 0;
+  var elJq   = 0;
+  var elGit  = 0;
   /* Every time the window is scrolled ... */
   $(window).scroll(function(){
     
@@ -82,7 +87,8 @@ $(document).ready(function() {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
+      if( bottom_of_window > bottom_of_object && elHtml === 0 ){
+        elHtml = 1;
         $(this).animate({
           'width':'75%'
         },500, function(){
@@ -97,7 +103,8 @@ $(document).ready(function() {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
+      if( bottom_of_window > bottom_of_object && elCss === 0){
+        elCss = 1;
         $(this).animate({
           'width':'80%'
         },500 , function(){
@@ -112,7 +119,8 @@ $(document).ready(function() {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
+      if( bottom_of_window > bottom_of_object && elJs === 0){
+        elJs = 1;
         $(this).animate({
           'width':'65%'
         },500 , function(){
@@ -127,7 +135,8 @@ $(document).ready(function() {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
+      if( bottom_of_window > bottom_of_object && elJq === 0){
+        elJq = 1;
         $(this).animate({
           'width':'60%'
         },500, function(){
@@ -142,7 +151,8 @@ $(document).ready(function() {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object ){
+      if( bottom_of_window > bottom_of_object && elGit === 0){
+        elGit = 1;
         $(this).animate({
           'width':'45%'
         },500 , function(){
@@ -308,7 +318,7 @@ uniButton.addEventListener('click' , uniDisplay);
 function uniDisplay(){
   var changeColor =[
     '#f2f3f7',
-    "skyblue"
+    'dodgerblue'
   ];
   var changeTextColor =[
     "#333",
@@ -348,7 +358,7 @@ highButton.addEventListener('click' , highDisplay);
 function highDisplay(){
   var changeColor =[
     "#f2f3f7",
-    "skyblue"
+    "dodgerblue"
   ];
   var changeTextColor =[
     "#333",
@@ -389,7 +399,7 @@ juniButton.addEventListener('click' , juniDisplay);
 function juniDisplay(){
   var changeColor =[
     "#f2f3f7",
-    "skyblue"
+    "dodgerblue"
   ];
   var changeTextColor =[
     "#333",
@@ -430,7 +440,7 @@ elemButton.addEventListener('click' , elemDisplay);
 function elemDisplay(){
   var changeColor =[
     "#f2f3f7",
-    "skyblue"
+    "dodgerblue"
   ];
   var changeTextColor =[
     "#333",
@@ -441,7 +451,7 @@ function elemDisplay(){
   var eduBg = document.querySelector('.elementaryA');
   var changeFas = document.getElementById('elemFas');
   if(eduBg.style.background === changeColor[0]){
-    eduBg.style.background = changeColor[1];
+    eduBg.style.background === changeColor[1];
   } else if(eduBg.style.background === changeColor[1]){
     eduBg.style.background = changeColor[0];
     eduBg.style.color = changeTextColor[0];
