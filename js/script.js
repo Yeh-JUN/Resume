@@ -228,11 +228,10 @@ function changeSecond(){
       elTextSecond.textContent = changeText[1];
     }
     
-  if(elImgSecond.style.background = changeImgs[0]){
-    
-        elImgSecond.style.background = "url(" + changeImgs[1] + " )";
-        document.getElementById('mainContainer').style.backgroundSize = 'cover';
-        document.getElementById('mainContainer').style.backgroundPosition ='center';
+    if(elImgSecond.style.background = changeImgs[0]){
+      elImgSecond.style.background = "url(" + changeImgs[1] + " )";
+      document.getElementById('mainContainer').style.backgroundSize = 'cover';
+      document.getElementById('mainContainer').style.backgroundPosition ='center';
       
     }else{
       elImgSecond.style.background = "url("+ changeImgs[1] + ")";
@@ -272,44 +271,37 @@ function changeBg(){
   var mainBg='';
   var mainBg = document.getElementById('mainContainer');
   mainBg.style.background = "url(" + changeImgs[currentIndex] + " )";
-  
   document.getElementById('mainContainer').style.backgroundSize = 'cover';
   document.getElementById('mainContainer').style.backgroundPosition ='center';
 }
 var chBg = setInterval('changeBg()',4000);
 
-/*
-document.querySelector('.universityA').addEventListener('click' , function(event){
-  event.preventDefault();
-},false);
-document.querySelector('.highSchoolA').addEventListener('click' , function(event){
-  event.preventDefault();
-},false);
-document.querySelector('.juniorHighA').addEventListener('click' , function(event){
-  event.preventDefault();
-},false);
-document.querySelector('.elementaryA').addEventListener('click' , function(event){
-  event.preventDefault();
-},false);
-*/
 $('.education-event').on('click' , function(event){
   event.preventDefault();
 },false);
-
 var uniButton='';
 var uniButton = document.querySelector('.universityA');
 uniButton.addEventListener('click' , uniDisplay);
+var highButton='';
+var highButton = document.querySelector('.highSchoolA');
+highButton.addEventListener('click' , highDisplay);
+var juniButton='';
+var juniButton = document.querySelector('.juniorHighA');
+juniButton.addEventListener('click' , juniDisplay);
+var elemButton='';
+var elemButton = document.querySelector('.elementaryA');
+elemButton.addEventListener('click' , elemDisplay);
+
+var changeColor =[
+  "#f2f3f7",
+  "dodgerblue"
+];
+var changeTextColor =[
+  "#333",
+  "#fff"
+];
 
 function uniDisplay(){
-  var changeColor =[
-    '#f2f3f7',
-    'dodgerblue'
-  ];
-  var changeTextColor =[
-    "#333",
-    "#fff"
-  ];
-
   var eduBg = document.querySelector('.universityA');
   var changeFas = document.getElementById('uniFas');
   if(eduBg.style.background === changeColor[0]){
@@ -323,7 +315,6 @@ function uniDisplay(){
     eduBg.style.color = changeTextColor[1];
     changeFas.setAttribute('class' , ' fas fa-minus');
   }
-  
   var uniBody = document.querySelector('.universityBody');
   if(uniBody.style.display==='none'){
     uniBody.style.display='';
@@ -332,21 +323,10 @@ function uniDisplay(){
   }
 }
 
-
 var highButton='';
 var highButton = document.querySelector('.highSchoolA');
 highButton.addEventListener('click' , highDisplay);
-
 function highDisplay(){
-  var changeColor =[
-    "#f2f3f7",
-    "dodgerblue"
-  ];
-  var changeTextColor =[
-    "#333",
-    "#fff"
-  ];
-
   var eduBg='';
   var eduBg = document.querySelector('.highSchoolA');
   var changeFas = document.getElementById('highFas');
@@ -361,7 +341,6 @@ function highDisplay(){
     eduBg.style.color = changeTextColor[1];
     changeFas.setAttribute('class' , ' fas fa-minus');
   }
-
   var highBody = document.querySelector('.highSchoolBody');
   if(highBody.style.display==='none'){
     highBody.style.display='';
@@ -370,21 +349,10 @@ function highDisplay(){
   }
 }
 
-
 var juniButton='';
 var juniButton = document.querySelector('.juniorHighA');
 juniButton.addEventListener('click' , juniDisplay);
-
 function juniDisplay(){
-  var changeColor =[
-    "#f2f3f7",
-    "dodgerblue"
-  ];
-  var changeTextColor =[
-    "#333",
-    "#fff"
-  ];
-
   var eduBg='';
   var eduBg = document.querySelector('.juniorHighA');
   var changeFas = document.getElementById('juniFas');
@@ -399,7 +367,6 @@ function juniDisplay(){
     eduBg.style.color = changeTextColor[1];
     changeFas.setAttribute('class' , ' fas fa-minus');
   }
-
   var juniBody = document.querySelector('.juniorHighBody');
   if(juniBody.style.display==='none'){
     juniBody.style.display='';
@@ -408,21 +375,10 @@ function juniDisplay(){
   }
 }
 
-
 var elemButton='';
 var elemButton = document.querySelector('.elementaryA');
 elemButton.addEventListener('click' , elemDisplay);
-
 function elemDisplay(){
-  var changeColor =[
-    "#f2f3f7",
-    "dodgerblue"
-  ];
-  var changeTextColor =[
-    "#333",
-    "#fff"
-  ];
-
   var eduBg='';
   var eduBg = document.querySelector('.elementaryA');
   var changeFas = document.getElementById('elemFas');
@@ -437,7 +393,6 @@ function elemDisplay(){
     eduBg.style.color = changeTextColor[1];
     changeFas.setAttribute('class' , ' fas fa-minus');
   }
-
   var elemBody = document.querySelector('.elementaryBody');
   if(elemBody.style.display==='none'){
     elemBody.style.display='';
@@ -445,12 +400,3 @@ function elemDisplay(){
     elemBody.style.display='none';
   }
 }
-
-
-
-
-
-
-
-
-
