@@ -1,12 +1,7 @@
-var uniBody,highBody,juniBody,elementaryBody='';
-var uniBody        = document.querySelector('.universityBody');
-var highBody       = document.querySelector('.highSchoolBody');
-var juniBody       = document.querySelector('.juniorHighBody');
-var elementaryBody = document.querySelector('.elementaryBody');
-uniBody.setAttribute('style', 'display: none;');
-highBody.setAttribute('style', 'display: none;');
-juniBody.setAttribute('style', 'display: none;');
-elementaryBody.setAttribute('style', 'display: none;');
+var uniBody        = document.querySelector('.universityBody').setAttribute('style', 'display: none;');
+var highBody       = document.querySelector('.highSchoolBody').setAttribute('style', 'display: none;');
+var juniBody       = document.querySelector('.juniorHighBody').setAttribute('style', 'display: none;');
+var elementaryBody = document.querySelector('.elementaryBody').setAttribute('style', 'display: none;');
 
 var activeId = null;
 $(window).bind('scroll', function() {
@@ -274,7 +269,6 @@ var chBg = setInterval('changeBg()',4000);
 $('.education-event').on('click' , function(event){
   event.preventDefault();
 },false);
-
 var uniButton = document.querySelector('.universityA');
 uniButton.addEventListener('click' , function(){
   var eduBg = document.querySelector('.universityA');
@@ -282,7 +276,6 @@ uniButton.addEventListener('click' , function(){
   var changeBody = document.querySelector('.universityBody');
   Display(eduBg , changeFas , changeBody);
 });
-
 var highButton = document.querySelector('.highSchoolA');
 highButton.addEventListener('click' , function(){
   var eduBg = document.querySelector('.highSchoolA');
@@ -290,7 +283,6 @@ highButton.addEventListener('click' , function(){
   var changeBody = document.querySelector('.highSchoolBody');
   Display(eduBg , changeFas , changeBody);
 });
-
 var juniButton = document.querySelector('.juniorHighA');
 juniButton.addEventListener('click' , function(){
   var eduBg = document.querySelector('.juniorHighA');
@@ -298,7 +290,6 @@ juniButton.addEventListener('click' , function(){
   var changeBody = document.querySelector('.juniorHighBody');
   Display(eduBg , changeFas , changeBody);
 });
-
 var elemButton = document.querySelector('.elementaryA');
 elemButton.addEventListener('click' , function(){
   var eduBg = document.querySelector('.elementaryA');
@@ -306,7 +297,6 @@ elemButton.addEventListener('click' , function(){
   var changeBody = document.querySelector('.elementaryBody');
   Display(eduBg , changeFas , changeBody);
 });
-
 var changeColor =[
   "#f2f3f7",
   "dodgerblue"
