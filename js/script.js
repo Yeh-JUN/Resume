@@ -147,6 +147,26 @@ $(document).ready(function() {
   });
 });
 
+var changeText = [    
+  "Hi! I'm Duncan.",
+  "Constant Learning"
+];
+
+var changeImgs = [    
+  "imgs/joshua-earle-1420452-unsplash.jpg",
+  "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
+];
+
+var changeColor =[
+  "#f2f3f7",
+  "dodgerblue"
+];
+
+var changeTextColor =[
+  "#333",
+  "#fff"
+];
+
 var chF=document.getElementById('changeFirst');
 var chS=document.getElementById('changeSecond');
 chF.addEventListener('click' , function(){
@@ -163,14 +183,6 @@ function stopCount(){
   clearInterval(chBg);
 }
 function changeFirst(){
-  var changeText = [    
-    "Hi! I'm Duncan.",
-    "Constant Learning"
-  ];
-  var changeImgs = [    
-    "imgs/joshua-earle-1420452-unsplash.jpg",
-    "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
-  ];
   var elTextFirst = document.getElementById('greetingTextOne');
   var elImgFirst = document.getElementById('mainContainer');
   if(elTextFirst.textContent === changeText[1]){
@@ -198,14 +210,6 @@ function changeFirst(){
 }
 
 function changeSecond(){
-  var changeText = [    
-    "Hi! I'm Duncan.",
-    "Constant Learning"
-  ];
-  var changeImgs = [    
-    "imgs/joshua-earle-1420452-unsplash.jpg",
-    "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
-  ];
   var elTextSecond = document.getElementById('greetingTextOne');
   var elImgSecond = document.getElementById('mainContainer')
   if(elTextSecond.textContent === changeText[0]){
@@ -233,11 +237,7 @@ function changeSecond(){
 }
 
 var currentText = 0;
-function changeText(){
-  var changeText = [    
-    "Hi! I'm Duncan.",
-    "Constant Learning"
-  ];
+function changeGreeting(){
   currentText++;
   currentText%=2;
   if(currentText===0){
@@ -250,14 +250,10 @@ function changeText(){
     $('#changeSecond').removeClass('dotActive');
   }
 }
-var chText = setInterval('changeText()',4000);
+var chText = setInterval('changeGreeting()',4000);
 
 var currentIndex = 0;
 function changeBg(){
-  var changeImgs = [    
-    "imgs/joshua-earle-1420452-unsplash.jpg",
-    "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
-  ];
   currentIndex++;
   currentIndex%=2;  
   //主要要把currentIndex的值儲存起來,,,,只有currentIndex%2只是運算式
@@ -269,6 +265,7 @@ function changeBg(){
   document.getElementById('mainContainer').style.backgroundPosition ='center';
 }
 var chBg = setInterval('changeBg()',4000);
+
 
 $('.education-event').on('click' , function(event){
   event.preventDefault();
@@ -301,14 +298,7 @@ elemButton.addEventListener('click' , function(){
   var changeBody = document.querySelector('.elementaryBody');
   Display(eduBg , changeFas , changeBody);
 });
-var changeColor =[
-  "#f2f3f7",
-  "dodgerblue"
-];
-var changeTextColor =[
-  "#333",
-  "#fff"
-];
+
 function Display(eduBg, changeFas ,changeBody ){
   if(eduBg.style.background === changeColor[0]){
     eduBg.style.background = changeColor[1];
