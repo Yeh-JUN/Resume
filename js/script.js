@@ -278,10 +278,24 @@ function changeBg(){
 }
 var chBg = setInterval('changeBg()',4000);
 
-
+/*
 document.querySelector('.universityA').addEventListener('click' , function(event){
   event.preventDefault();
 },false);
+document.querySelector('.highSchoolA').addEventListener('click' , function(event){
+  event.preventDefault();
+},false);
+document.querySelector('.juniorHighA').addEventListener('click' , function(event){
+  event.preventDefault();
+},false);
+document.querySelector('.elementaryA').addEventListener('click' , function(event){
+  event.preventDefault();
+},false);
+*/
+$('.education-event').on('click' , function(event){
+  event.preventDefault();
+},false);
+
 var uniButton='';
 var uniButton = document.querySelector('.universityA');
 uniButton.addEventListener('click' , uniDisplay);
@@ -318,9 +332,7 @@ function uniDisplay(){
   }
 }
 
-document.querySelector('.highSchoolA').addEventListener('click' , function(event){
-  event.preventDefault();
-},false);
+
 var highButton='';
 var highButton = document.querySelector('.highSchoolA');
 highButton.addEventListener('click' , highDisplay);
@@ -358,9 +370,7 @@ function highDisplay(){
   }
 }
 
-document.querySelector('.juniorHighA').addEventListener('click' , function(event){
-  event.preventDefault();
-},false);
+
 var juniButton='';
 var juniButton = document.querySelector('.juniorHighA');
 juniButton.addEventListener('click' , juniDisplay);
@@ -398,9 +408,7 @@ function juniDisplay(){
   }
 }
 
-document.querySelector('.elementaryA').addEventListener('click' , function(event){
-  event.preventDefault();
-},false);
+
 var elemButton='';
 var elemButton = document.querySelector('.elementaryA');
 elemButton.addEventListener('click' , elemDisplay);
