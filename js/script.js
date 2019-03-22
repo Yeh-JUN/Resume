@@ -149,10 +149,14 @@ $(document).ready(function() {
 
 var chF=document.getElementById('changeFirst');
 var chS=document.getElementById('changeSecond');
-chF.addEventListener('click' , changeFirst);
-chS.addEventListener('click' , changeSecond);
-chF.addEventListener('click' , stopCount);
-chS.addEventListener('click' , stopCount);
+chF.addEventListener('click' , function(){
+  stopCount();
+  changeFirst();
+});
+chS.addEventListener('click' , function(){
+  stopCount();
+  changeSecond();
+});
 
 function stopCount(){
   clearInterval(chText);
