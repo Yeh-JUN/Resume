@@ -169,6 +169,62 @@ var changeTextColor =[
 
 var chF=document.getElementById('changeFirst');
 var chS=document.getElementById('changeSecond');
+chF.addEventListener('click' , function(event){
+  var elText = document.getElementById('greetingTextOne');
+  var elImg = document.getElementById('mainContainer');
+  var chBtn=document.getElementById('changeFirst');
+  event.preventDefault();
+  stopCount();
+  changeBgText(elText , elImg , chBtn);
+});
+chS.addEventListener('click' , function(event){
+  var elText = document.getElementById('greetingTextOne');
+  var elImg = document.getElementById('mainContainer');
+  var chBtn=document.getElementById('changeSecond');
+  event.preventDefault();
+  stopCount();
+  changeBgText(elText , elImg , chBtn);
+});
+
+function stopCount(){
+  clearInterval(chText);
+  clearInterval(chBg);
+}
+
+function changeBgText(elText , elImg , chBtn){
+  if(elText.textContent === changeText[1] && chBtn === changeFirst){
+    $('#changeFirst').removeClass('dotActive');
+    $('#changeSecond').addClass('dotActive');
+    $(elText).animate({
+      opacity:0,
+    },100,function(){
+      $(elText).animate({
+        opacity:1,
+      },200)
+      elText.textContent = changeText[0];
+      elImg.style.background = "url(" + changeImgs[0] + " )";
+      document.getElementById('mainContainer').style.backgroundSize = 'cover';
+      document.getElementById('mainContainer').style.backgroundPosition ='center';
+    });
+  }else if(elText.textContent === changeText[0] && chBtn === changeSecond){
+    $('#changeFirst').addClass('dotActive');
+    $('#changeSecond').removeClass('dotActive');
+    $(elText).animate({
+      opacity:0,
+    },100,function(){
+      $(elText).animate({
+        opacity:1,
+      },200)
+      elText.textContent = changeText[1];
+      elImg.style.background = "url(" + changeImgs[1] + " )";
+      document.getElementById('mainContainer').style.backgroundSize = 'cover';
+      document.getElementById('mainContainer').style.backgroundPosition ='center';
+    });
+  }
+}
+/*
+var chF=document.getElementById('changeFirst');
+var chS=document.getElementById('changeSecond');
 chF.addEventListener('click' , function(){
   stopCount();
   changeFirst();
@@ -235,7 +291,7 @@ function changeSecond(){
       elImgSecond.style.background = "url("+ changeImgs[1] + ")";
   }
 }
-
+*/
 var currentText = 0;
 function changeGreeting(){
   currentText++;
