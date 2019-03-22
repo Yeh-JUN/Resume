@@ -158,6 +158,7 @@ chF.addEventListener('click' , changeFirst);
 chS.addEventListener('click' , changeSecond);
 chF.addEventListener('click' , stopCount);
 chS.addEventListener('click' , stopCount);
+
 function stopCount(){
   clearInterval(chText);
   clearInterval(chBg);
@@ -173,7 +174,6 @@ function changeFirst(){
   ];
   var elTextFirst = document.getElementById('greetingTextOne');
   var elImgFirst = document.getElementById('mainContainer');
-  
   if(elTextFirst.textContent === changeText[1]){
     $('#changeFirst').removeClass('dotActive');
     $('#changeSecond').addClass('dotActive');
@@ -189,9 +189,7 @@ function changeFirst(){
     }else{
       elTextFirst.textContent = changeText[0];
     };
-    
   if(elImgFirst.style.background = changeImgs[1]){
-    
       elImgFirst.style.background = "url(" + changeImgs[0] + " )";
       document.getElementById('mainContainer').style.backgroundSize = 'cover';
       document.getElementById('mainContainer').style.backgroundPosition ='center';
@@ -212,7 +210,6 @@ function changeSecond(){
   var elTextSecond = document.getElementById('greetingTextOne');
   var elImgSecond = document.getElementById('mainContainer')
   if(elTextSecond.textContent === changeText[0]){
-    
     $('#changeFirst').addClass('dotActive');
     $('#changeSecond').removeClass('dotActive');
     $(elTextSecond).animate({
@@ -227,12 +224,10 @@ function changeSecond(){
     }else{
       elTextSecond.textContent = changeText[1];
     }
-    
-    if(elImgSecond.style.background = changeImgs[0]){
+  if(elImgSecond.style.background = changeImgs[0]){
       elImgSecond.style.background = "url(" + changeImgs[1] + " )";
       document.getElementById('mainContainer').style.backgroundSize = 'cover';
       document.getElementById('mainContainer').style.backgroundPosition ='center';
-      
     }else{
       elImgSecond.style.background = "url("+ changeImgs[1] + ")";
   }
@@ -279,18 +274,38 @@ var chBg = setInterval('changeBg()',4000);
 $('.education-event').on('click' , function(event){
   event.preventDefault();
 },false);
-var uniButton='';
+
 var uniButton = document.querySelector('.universityA');
-uniButton.addEventListener('click' , uniDisplay);
-var highButton='';
+uniButton.addEventListener('click' , function(){
+  var eduBg = document.querySelector('.universityA');
+  var changeFas = document.getElementById('uniFas');
+  var changeBody = document.querySelector('.universityBody');
+  Display(eduBg , changeFas , changeBody);
+});
+
 var highButton = document.querySelector('.highSchoolA');
-highButton.addEventListener('click' , highDisplay);
-var juniButton='';
+highButton.addEventListener('click' , function(){
+  var eduBg = document.querySelector('.highSchoolA');
+  var changeFas = document.getElementById('highFas');
+  var changeBody = document.querySelector('.highSchoolBody');
+  Display(eduBg , changeFas , changeBody);
+});
+
 var juniButton = document.querySelector('.juniorHighA');
-juniButton.addEventListener('click' , juniDisplay);
-var elemButton='';
+juniButton.addEventListener('click' , function(){
+  var eduBg = document.querySelector('.juniorHighA');
+  var changeFas = document.getElementById('juniFas');
+  var changeBody = document.querySelector('.juniorHighBody');
+  Display(eduBg , changeFas , changeBody);
+});
+
 var elemButton = document.querySelector('.elementaryA');
-elemButton.addEventListener('click' , elemDisplay);
+elemButton.addEventListener('click' , function(){
+  var eduBg = document.querySelector('.elementaryA');
+  var changeFas = document.getElementById('elemFas');
+  var changeBody = document.querySelector('.elementaryBody');
+  Display(eduBg , changeFas , changeBody);
+});
 
 var changeColor =[
   "#f2f3f7",
@@ -300,10 +315,7 @@ var changeTextColor =[
   "#333",
   "#fff"
 ];
-
-function uniDisplay(){
-  var eduBg = document.querySelector('.universityA');
-  var changeFas = document.getElementById('uniFas');
+function Display(eduBg, changeFas ,changeBody ){
   if(eduBg.style.background === changeColor[0]){
     eduBg.style.background = changeColor[1];
   } else if(eduBg.style.background === changeColor[1]){
@@ -315,88 +327,9 @@ function uniDisplay(){
     eduBg.style.color = changeTextColor[1];
     changeFas.setAttribute('class' , ' fas fa-minus');
   }
-  var uniBody = document.querySelector('.universityBody');
-  if(uniBody.style.display==='none'){
-    uniBody.style.display='';
+  if(changeBody.style.display==='none'){
+    changeBody.style.display='';
   } else{
-    uniBody.style.display='none';
-  }
-}
-
-var highButton='';
-var highButton = document.querySelector('.highSchoolA');
-highButton.addEventListener('click' , highDisplay);
-function highDisplay(){
-  var eduBg='';
-  var eduBg = document.querySelector('.highSchoolA');
-  var changeFas = document.getElementById('highFas');
-  if(eduBg.style.background === changeColor[0]){
-    eduBg.style.background = changeColor[1];
-  } else if(eduBg.style.background === changeColor[1]){
-    eduBg.style.background = changeColor[0];
-    eduBg.style.color = changeTextColor[0];
-    changeFas.setAttribute('class' , ' fas fa-plus');
-  } else{
-    eduBg.style.background = changeColor[1];
-    eduBg.style.color = changeTextColor[1];
-    changeFas.setAttribute('class' , ' fas fa-minus');
-  }
-  var highBody = document.querySelector('.highSchoolBody');
-  if(highBody.style.display==='none'){
-    highBody.style.display='';
-  } else{
-    highBody.style.display='none';
-  }
-}
-
-var juniButton='';
-var juniButton = document.querySelector('.juniorHighA');
-juniButton.addEventListener('click' , juniDisplay);
-function juniDisplay(){
-  var eduBg='';
-  var eduBg = document.querySelector('.juniorHighA');
-  var changeFas = document.getElementById('juniFas');
-  if(eduBg.style.background === changeColor[0]){
-    eduBg.style.background = changeColor[1];
-  } else if(eduBg.style.background === changeColor[1]){
-    eduBg.style.background = changeColor[0];
-    eduBg.style.color = changeTextColor[0];
-    changeFas.setAttribute('class' , ' fas fa-plus');
-  } else{
-    eduBg.style.background = changeColor[1];
-    eduBg.style.color = changeTextColor[1];
-    changeFas.setAttribute('class' , ' fas fa-minus');
-  }
-  var juniBody = document.querySelector('.juniorHighBody');
-  if(juniBody.style.display==='none'){
-    juniBody.style.display='';
-  } else{
-    juniBody.style.display='none';
-  }
-}
-
-var elemButton='';
-var elemButton = document.querySelector('.elementaryA');
-elemButton.addEventListener('click' , elemDisplay);
-function elemDisplay(){
-  var eduBg='';
-  var eduBg = document.querySelector('.elementaryA');
-  var changeFas = document.getElementById('elemFas');
-  if(eduBg.style.background === changeColor[0]){
-    eduBg.style.background === changeColor[1];
-  } else if(eduBg.style.background === changeColor[1]){
-    eduBg.style.background = changeColor[0];
-    eduBg.style.color = changeTextColor[0];
-    changeFas.setAttribute('class' , ' fas fa-plus');
-  } else{
-    eduBg.style.background = changeColor[1];
-    eduBg.style.color = changeTextColor[1];
-    changeFas.setAttribute('class' , ' fas fa-minus');
-  }
-  var elemBody = document.querySelector('.elementaryBody');
-  if(elemBody.style.display==='none'){
-    elemBody.style.display='';
-  } else{
-    elemBody.style.display='none';
+    changeBody.style.display='none';
   }
 }
