@@ -151,22 +151,18 @@ var changeText = [
   "Hi! I'm Duncan.",
   "Constant Learning"
 ];
-
 var changeImgs = [    
   "imgs/joshua-earle-1420452-unsplash.jpg",
   "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
 ];
-
 var changeColor =[
   "#f2f3f7",
   "dodgerblue"
 ];
-
 var changeTextColor =[
   "#333",
   "#fff"
 ];
-/*
 var chF=document.getElementById('changeFirst');
 var chS=document.getElementById('changeSecond');
 chF.addEventListener('click' , function(event){
@@ -373,73 +369,3 @@ function Display(eduBg, changeFas ,changeBody ){
     changeBody.style.display='none';
   }
 }
-
-
-
-
-var chF=document.getElementById('changeFirst');
-var chS=document.getElementById('changeSecond');
-chF.addEventListener('click' , function(event){
-  var elText = document.getElementById('greetingTextOne');
-  var elImg = document.getElementById('mainContainer');
-  var chBtn=document.getElementById('changeFirst');
-  console.log(chBtn);
-  event.preventDefault();
-  stopCount();
-  changeBgText(elText , elImg , chBtn);
-});
-chS.addEventListener('click' , function(event){
-  var elText = document.getElementById('greetingTextOne');
-  var elImg = document.getElementById('mainContainer');
-  var chBtn=document.getElementById('changeSecond');
-  console.log(chBtn);
-  event.preventDefault();
-  stopCount();
-  changeBgText(elText , elImg , chBtn);
-});
-
-function stopCount(){
-  clearInterval(chText);
-  clearInterval(chBg);
-}
-
-function changeBgText(elText , elImg , chBtn){
-  if(elText.textContent === changeText[0] && chBtn === changeFirst){
-    $('#changeFirst').removeClass('dotActive');
-    $('#changeSecond').addClass('dotActive');
-    elText.textContent = changeText[0];
-    elImg.style.background = "url(" + changeImgs[0] + " )";
-    document.getElementById('mainContainer').style.backgroundSize = 'cover';
-    document.getElementById('mainContainer').style.backgroundPosition ='center';
-  }else if(elText.textContent === changeText[1] && chBtn === changeFirst){
-    $('#changeFirst').removeClass('dotActive');
-    $('#changeSecond').addClass('dotActive');
-    elText.textContent = changeText[0];
-    elImg.style.background = "url(" + changeImgs[0] + " )";
-    document.getElementById('mainContainer').style.backgroundSize = 'cover';
-    document.getElementById('mainContainer').style.backgroundPosition ='center';
-  }else if(elText.textContent === changeText[0] && chBtn === changeSecond){
-    $('#changeFirst').removeClass('dotActive');
-    $('#changeSecond').addClass('dotActive');
-    elText.textContent = changeText[1];
-    elImg.style.background = "url(" + changeImgs[1] + " )";
-    document.getElementById('mainContainer').style.backgroundSize = 'cover';
-    document.getElementById('mainContainer').style.backgroundPosition ='center';
-  }else if(elText.textContent === changeText[1] && chBtn === changeSecond){
-    $('#changeFirst').removeClass('dotActive');
-    $('#changeSecond').addClass('dotActive');
-    elText.textContent = changeText[0];
-    elImg.style.background = "url(" + changeImgs[0] + " )";
-    document.getElementById('mainContainer').style.backgroundSize = 'cover';
-    document.getElementById('mainContainer').style.backgroundPosition ='center';
-  }
-}
-
-
-/*
-$('#changeFirst').removeClass('dotActive');
-$('#changeSecond').addClass('dotActive');
-elImgFirst.style.background = "url(" + changeImgs[0] + " )";
-document.getElementById('mainContainer').style.backgroundSize = 'cover';
-document.getElementById('mainContainer').style.backgroundPosition ='center';
-*/
