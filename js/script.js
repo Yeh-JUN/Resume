@@ -163,6 +163,7 @@ var changeTextColor =[
   "#333",
   "#fff"
 ];
+/*
 var chF=document.getElementById('changeFirst');
 var chS=document.getElementById('changeSecond');
 chF.addEventListener('click' , function(event){
@@ -188,7 +189,7 @@ function stopCount(){
 }
 
 function changeBgText(elText , elImg , chBtn){
-  if(elText.textContent === changeText[1] && chBtn === changeFirst){
+  if(elText.textContent !== changeText[0] && chBtn === changeFirst){
     $('#changeFirst').removeClass('dotActive');
     $('#changeSecond').addClass('dotActive');
     $(elText).animate({
@@ -202,7 +203,8 @@ function changeBgText(elText , elImg , chBtn){
       document.getElementById('mainContainer').style.backgroundSize = 'cover';
       document.getElementById('mainContainer').style.backgroundPosition ='center';
     });
-  }else if(elText.textContent === changeText[0] && chBtn === changeSecond){
+    
+  }else if(elText.textContent !== changeText[1] && chBtn === changeSecond){
     $('#changeFirst').addClass('dotActive');
     $('#changeSecond').removeClass('dotActive');
     $(elText).animate({
@@ -369,3 +371,71 @@ function Display(eduBg, changeFas ,changeBody ){
     changeBody.style.display='none';
   }
 }
+
+
+
+
+
+var chF=document.getElementById('changeFirst');
+var chS=document.getElementById('changeSecond');
+chF.addEventListener('click' , function(event){
+  var xBg   = changeImgs[0];
+  var xText = changeText[0];
+  var xBtn  = document.getElementById('changeFirst');
+  event.preventDefault();
+  stopCount();
+  changeBgText(xBg , xText , xBtn);
+});
+chS.addEventListener('click' , function(event){
+  var xBg   = changeImgs[1];
+  var xText = changeText[1];
+  var xBtn  = document.getElementById('changeSecond');
+  event.preventDefault();
+  stopCount();
+  changeBgText(xBg , xText ,xBtn);
+});
+
+function stopCount(){
+  clearInterval(chText);
+  clearInterval(chBg);
+}
+
+function changeBgText(xBg , xText ,xBtn){
+   
+  
+}
+
+/*
+function changeBgText(elText , elImg , chBtn){
+  if(elText.textContent !== changeText[0] && chBtn === changeFirst){
+    $('#changeFirst').removeClass('dotActive');
+    $('#changeSecond').addClass('dotActive');
+    $(elText).animate({
+      opacity:0,
+    },100,function(){
+      $(elText).animate({
+        opacity:1,
+      },200)
+      elText.textContent = changeText[0];
+      elImg.style.background = "url(" + changeImgs[0] + " )";
+      document.getElementById('mainContainer').style.backgroundSize = 'cover';
+      document.getElementById('mainContainer').style.backgroundPosition ='center';
+    });
+    
+  }else if(elText.textContent !== changeText[1] && chBtn === changeSecond){
+    $('#changeFirst').addClass('dotActive');
+    $('#changeSecond').removeClass('dotActive');
+    $(elText).animate({
+      opacity:0,
+    },100,function(){
+      $(elText).animate({
+        opacity:1,
+      },200)
+      elText.textContent = changeText[1];
+      elImg.style.background = "url(" + changeImgs[1] + " )";
+      document.getElementById('mainContainer').style.backgroundSize = 'cover';
+      document.getElementById('mainContainer').style.backgroundPosition ='center';
+    });
+  }
+}
+*/
