@@ -163,24 +163,23 @@ var changeTextColor =[
   "#333",
   "#fff"
 ];
-/*
 var chF=document.getElementById('changeFirst');
 var chS=document.getElementById('changeSecond');
 chF.addEventListener('click' , function(event){
-  var elText = document.getElementById('greetingTextOne');
-  var elImg = document.getElementById('mainContainer');
-  var chBtn=document.getElementById('changeFirst');
+  var xBg   = changeImgs[0];
+  var xText = changeText[0];
+  var xBtn  = document.getElementById('changeFirst');
   event.preventDefault();
   stopCount();
-  changeBgText(elText , elImg , chBtn);
+  changeBgText(xBg , xText , xBtn);
 });
 chS.addEventListener('click' , function(event){
-  var elText = document.getElementById('greetingTextOne');
-  var elImg = document.getElementById('mainContainer');
-  var chBtn=document.getElementById('changeSecond');
+  var xBg   = changeImgs[1];
+  var xText = changeText[1];
+  var xBtn  = document.getElementById('changeSecond');
   event.preventDefault();
   stopCount();
-  changeBgText(elText , elImg , chBtn);
+  changeBgText(xBg , xText ,xBtn);
 });
 
 function stopCount(){
@@ -188,108 +187,26 @@ function stopCount(){
   clearInterval(chBg);
 }
 
-function changeBgText(elText , elImg , chBtn){
-  if(elText.textContent !== changeText[0] && chBtn === changeFirst){
-    $('#changeFirst').removeClass('dotActive');
-    $('#changeSecond').addClass('dotActive');
-    $(elText).animate({
-      opacity:0,
-    },100,function(){
-      $(elText).animate({
-        opacity:1,
-      },200)
-      elText.textContent = changeText[0];
-      elImg.style.background = "url(" + changeImgs[0] + " )";
-      document.getElementById('mainContainer').style.backgroundSize = 'cover';
-      document.getElementById('mainContainer').style.backgroundPosition ='center';
-    });
-    
-  }else if(elText.textContent !== changeText[1] && chBtn === changeSecond){
-    $('#changeFirst').addClass('dotActive');
-    $('#changeSecond').removeClass('dotActive');
-    $(elText).animate({
-      opacity:0,
-    },100,function(){
-      $(elText).animate({
-        opacity:1,
-      },200)
-      elText.textContent = changeText[1];
-      elImg.style.background = "url(" + changeImgs[1] + " )";
-      document.getElementById('mainContainer').style.backgroundSize = 'cover';
-      document.getElementById('mainContainer').style.backgroundPosition ='center';
-    });
-  }
-}
-/*
-var chF=document.getElementById('changeFirst');
-var chS=document.getElementById('changeSecond');
-chF.addEventListener('click' , function(){
-  stopCount();
-  changeFirst();
-});
-chS.addEventListener('click' , function(){
-  stopCount();
-  changeSecond();
-});
-
-function stopCount(){
-  clearInterval(chText);
-  clearInterval(chBg);
-}
-function changeFirst(){
-  var elTextFirst = document.getElementById('greetingTextOne');
-  var elImgFirst = document.getElementById('mainContainer');
-  if(elTextFirst.textContent === changeText[1]){
-    $('#changeFirst').removeClass('dotActive');
-    $('#changeSecond').addClass('dotActive');
-    $(elTextFirst).animate({
+function changeBgText(xBg , xText ,xBtn){
+   var currentBg = document.getElementById('mainContainer');
+   var currentText = document.getElementById('greetingTextOne');
+   if(currentText.textContent !== xText){
+     $(currentText).animate({
       opacity:0
-    },100,
-      function(){
-        $(elTextFirst).animate({
-          opacity: 1
-      },300);
-      elTextFirst.textContent = changeText[0];
-    });
-    }else{
-      elTextFirst.textContent = changeText[0];
-    };
-  if(elImgFirst.style.background = changeImgs[1]){
-      elImgFirst.style.background = "url(" + changeImgs[0] + " )";
-      document.getElementById('mainContainer').style.backgroundSize = 'cover';
-      document.getElementById('mainContainer').style.backgroundPosition ='center';
-    }else{
-      elImgFirst.style.background = "url("+ changeImgs[0] + ")";
-    };
+     },100,function(){
+      $(currentText).animate({
+        opacity:1
+      },300)
+      currentText.textContent = xText;
+     })
+     currentBg.style.background = "url("+ xBg +")";
+     document.getElementById('mainContainer').style.backgroundSize = 'cover';
+     document.getElementById('mainContainer').style.backgroundPosition ='center';
+     $('.dot').addClass('dotActive');
+     $(xBtn).removeClass('dotActive');
+   }
 }
 
-function changeSecond(){
-  var elTextSecond = document.getElementById('greetingTextOne');
-  var elImgSecond = document.getElementById('mainContainer')
-  if(elTextSecond.textContent === changeText[0]){
-    $('#changeFirst').addClass('dotActive');
-    $('#changeSecond').removeClass('dotActive');
-    $(elTextSecond).animate({
-      opacity:0
-    },100,
-      function(){
-        $(elTextSecond).animate({
-          opacity: 1
-      },300);
-      elTextSecond.textContent = changeText[1];
-    });
-    }else{
-      elTextSecond.textContent = changeText[1];
-    }
-  if(elImgSecond.style.background = changeImgs[0]){
-      elImgSecond.style.background = "url(" + changeImgs[1] + " )";
-      document.getElementById('mainContainer').style.backgroundSize = 'cover';
-      document.getElementById('mainContainer').style.backgroundPosition ='center';
-    }else{
-      elImgSecond.style.background = "url("+ changeImgs[1] + ")";
-  }
-}
-*/
 var currentText = 0;
 function changeGreeting(){
   currentText++;
@@ -371,71 +288,3 @@ function Display(eduBg, changeFas ,changeBody ){
     changeBody.style.display='none';
   }
 }
-
-
-
-
-
-var chF=document.getElementById('changeFirst');
-var chS=document.getElementById('changeSecond');
-chF.addEventListener('click' , function(event){
-  var xBg   = changeImgs[0];
-  var xText = changeText[0];
-  var xBtn  = document.getElementById('changeFirst');
-  event.preventDefault();
-  stopCount();
-  changeBgText(xBg , xText , xBtn);
-});
-chS.addEventListener('click' , function(event){
-  var xBg   = changeImgs[1];
-  var xText = changeText[1];
-  var xBtn  = document.getElementById('changeSecond');
-  event.preventDefault();
-  stopCount();
-  changeBgText(xBg , xText ,xBtn);
-});
-
-function stopCount(){
-  clearInterval(chText);
-  clearInterval(chBg);
-}
-
-function changeBgText(xBg , xText ,xBtn){
-   
-  
-}
-
-/*
-function changeBgText(elText , elImg , chBtn){
-  if(elText.textContent !== changeText[0] && chBtn === changeFirst){
-    $('#changeFirst').removeClass('dotActive');
-    $('#changeSecond').addClass('dotActive');
-    $(elText).animate({
-      opacity:0,
-    },100,function(){
-      $(elText).animate({
-        opacity:1,
-      },200)
-      elText.textContent = changeText[0];
-      elImg.style.background = "url(" + changeImgs[0] + " )";
-      document.getElementById('mainContainer').style.backgroundSize = 'cover';
-      document.getElementById('mainContainer').style.backgroundPosition ='center';
-    });
-    
-  }else if(elText.textContent !== changeText[1] && chBtn === changeSecond){
-    $('#changeFirst').addClass('dotActive');
-    $('#changeSecond').removeClass('dotActive');
-    $(elText).animate({
-      opacity:0,
-    },100,function(){
-      $(elText).animate({
-        opacity:1,
-      },200)
-      elText.textContent = changeText[1];
-      elImg.style.background = "url(" + changeImgs[1] + " )";
-      document.getElementById('mainContainer').style.backgroundSize = 'cover';
-      document.getElementById('mainContainer').style.backgroundPosition ='center';
-    });
-  }
-}
-*/
