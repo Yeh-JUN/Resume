@@ -1,28 +1,13 @@
-/**隱藏元素**/
-var uniBody='';
-var uniBody = document.querySelector('.universityBody');
-uniBody.setAttribute('style', 'display: none;');
+var uniBody        = document.querySelector('.universityBody').setAttribute('style', 'display: none;');
+var highBody       = document.querySelector('.highSchoolBody').setAttribute('style', 'display: none;');
+var juniBody       = document.querySelector('.juniorHighBody').setAttribute('style', 'display: none;');
+var elementaryBody = document.querySelector('.elementaryBody').setAttribute('style', 'display: none;');
 
-var highBody='';
-var highBody = document.querySelector('.highSchoolBody');
-highBody.setAttribute('style', 'display: none;');
-
-var juniBody='';
-var juniBody = document.querySelector('.juniorHighBody');
-juniBody.setAttribute('style', 'display: none;');
-
-var elementaryBody='';
-var elementaryBody = document.querySelector('.elementaryBody');
-elementaryBody.setAttribute('style', 'display: none;');
-/**隱藏元素**/
-
-
-/*********************************************導覽列跟隨**/
 var activeId = null;
 $(window).bind('scroll', function() {
   var currentTop = $(window).scrollTop();
   var elems = $('.scrollspy');
-  elems.each(function(index){
+  elems.each(function(){
     var id = $(this).attr('id');
     var elemTop = $(this).offset().top;
     var elemBottom	= elemTop + $(this).height();
@@ -35,9 +20,7 @@ $(window).bind('scroll', function() {
     }
   })
 });
-/***********************************************導覽列跟隨**/
 
-/***********************************************內容動畫效果(personal)**/
 $(document).ready(function() {
   var elHtml = 0;
   var elCss  = 0;
@@ -46,7 +29,6 @@ $(document).ready(function() {
   var elGit  = 0;
   /* Every time the window is scrolled ... */
   $(window).scroll(function(){
-    
     $('.aboutMove').each( function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -83,7 +65,7 @@ $(document).ready(function() {
       } 
     });
 
-    $('.htmlProgress').each( function(i){
+    $('.htmlProgress').each( function(){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
@@ -99,7 +81,7 @@ $(document).ready(function() {
       }
     });
     
-    $('.cssProgress').each( function(i){
+    $('.cssProgress').each( function(){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
@@ -115,7 +97,7 @@ $(document).ready(function() {
       }
     });
 
-    $('.jsProgress').each( function(i){
+    $('.jsProgress').each( function(){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
@@ -131,7 +113,7 @@ $(document).ready(function() {
       }
     });
 
-    $('.jqProgress').each( function(i){
+    $('.jqProgress').each( function(){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
@@ -147,7 +129,7 @@ $(document).ready(function() {
       }
     });
 
-    $('.gitProgress').each( function(i){
+    $('.gitProgress').each( function(){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
@@ -164,130 +146,85 @@ $(document).ready(function() {
     });
   });
 });
-/*************************************************內容動畫效果(personal)**/
 
-/*********************************************************點擊切換效果****/
+var changeText = [    
+  "Hi! I'm Duncan.",
+  "Constant Learning"
+];
+var changeImgs = [    
+  "imgs/joshua-earle-1420452-unsplash.jpg",
+  "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
+];
+var changeColor =[
+  "#f2f3f7",
+  "dodgerblue"
+];
+var changeTextColor =[
+  "#333",
+  "#fff"
+];
 var chF=document.getElementById('changeFirst');
 var chS=document.getElementById('changeSecond');
-chF.addEventListener('click' , changeFirst);
-chS.addEventListener('click' , changeSecond);
-chF.addEventListener('click' , stopCount);
-chS.addEventListener('click' , stopCount);
+chF.addEventListener('click' , function(event){
+  var xBg   = changeImgs[0];
+  var xText = changeText[0];
+  var xBtn  = document.getElementById('changeFirst');
+  event.preventDefault();
+  stopCount();
+  changeBgText(xBg , xText , xBtn);
+});
+chS.addEventListener('click' , function(event){
+  var xBg   = changeImgs[1];
+  var xText = changeText[1];
+  var xBtn  = document.getElementById('changeSecond');
+  event.preventDefault();
+  stopCount();
+  changeBgText(xBg , xText ,xBtn);
+});
 
 function stopCount(){
-  //停止setInverval()執行
   clearInterval(chText);
   clearInterval(chBg);
 }
 
-function changeFirst(){
-  var changeText = [    
-    "Hi! I'm Duncan.",
-    "Constant Learning"
-  ];
-  var changeImgs = [    
-    "imgs/joshua-earle-1420452-unsplash.jpg",
-    "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
-  ];
-  var elTextFirst = document.getElementById('greetingTextOne');
-  var elImgFirst = document.getElementById('mainContainer');
-  /**切換文字**/
-  if(elTextFirst.textContent === changeText[1]){
-    $('#changeFirst').removeClass('dotActive');
-    $('#changeSecond').addClass('dotActive');
-    $(elTextFirst).animate({
+function changeBgText(xBg , xText ,xBtn){
+   var currentBg = document.getElementById('mainContainer');
+   var currentText = document.getElementById('greetingTextOne');
+   if(currentText.textContent !== xText){
+     $(currentText).animate({
       opacity:0
-    },100,
-      function(){
-        $(elTextFirst).animate({
-          opacity: 1
-      },300);
-      elTextFirst.textContent = changeText[0];
-    });
-    }else{
-      elTextFirst.textContent = changeText[0];
-    };
-    /**切換圖片**/
-  if(elImgFirst.style.background = changeImgs[1]){
-    
-      elImgFirst.style.background = "url(" + changeImgs[0] + " )";
-      document.getElementById('mainContainer').style.backgroundSize = 'cover';
-      document.getElementById('mainContainer').style.backgroundPosition ='center';
-    
-    }else{
-      elImgFirst.style.background = "url("+ changeImgs[0] + ")";
-    };
+     },100,function(){
+      $(currentText).animate({
+        opacity:1
+      },300)
+      currentText.textContent = xText;
+     })
+     currentBg.style.background = "url("+ xBg +")";
+     document.getElementById('mainContainer').style.backgroundSize = 'cover';
+     document.getElementById('mainContainer').style.backgroundPosition ='center';
+     $('.dot').addClass('dotActive');
+     $(xBtn).removeClass('dotActive');
+   }
 }
 
-function changeSecond(){
-  var changeText = [    
-    "Hi! I'm Duncan.",
-    "Constant Learning"
-  ];
-  var changeImgs = [    
-    "imgs/joshua-earle-1420452-unsplash.jpg",
-    "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
-  ];
-  var elTextSecond = document.getElementById('greetingTextOne');
-  var elImgSecond = document.getElementById('mainContainer')
-  if(elTextSecond.textContent === changeText[0]){
-    /**切換文字**/
-    $('#changeFirst').addClass('dotActive');
-    $('#changeSecond').removeClass('dotActive');
-    $(elTextSecond).animate({
-      opacity:0
-    },100,
-      function(){
-        $(elTextSecond).animate({
-          opacity: 1
-      },300);
-      elTextSecond.textContent = changeText[1];
-    });
-    }else{
-      elTextSecond.textContent = changeText[1];
-    }
-    /**切換圖片**/
-  if(elImgSecond.style.background = changeImgs[0]){
-    
-        elImgSecond.style.background = "url(" + changeImgs[1] + " )";
-        document.getElementById('mainContainer').style.backgroundSize = 'cover';
-        document.getElementById('mainContainer').style.backgroundPosition ='center';
-      
-    }else{
-      elImgSecond.style.background = "url("+ changeImgs[1] + ")";
-  }
-}
-/*******************************************************頁面點擊切換效果****/
-
-/*************************************************自動切換首頁內容*****/
 var currentText = 0;
-function changeText(){
-  var changeText = [    
-    "Hi! I'm Duncan.",
-    "Constant Learning"
-  ];
+function changeGreeting(){
   currentText++;
   currentText%=2;
   if(currentText===0){
     document.getElementById('greetingTextOne').textContent= changeText[currentText];
-    
-    $('#changeFirst').removeClass('dotActive');//首頁按鈕背景顏色切換
+    $('#changeFirst').removeClass('dotActive');
     $('#changeSecond').addClass('dotActive');
   } else{
     document.getElementById('greetingTextOne').textContent= changeText[currentText];
-    $('#changeFirst').addClass('dotActive');   //首頁按鈕切換背景顏色切換
+    $('#changeFirst').addClass('dotActive');   
     $('#changeSecond').removeClass('dotActive');
   }
 }
-var chText = setInterval('changeText()',4000);
-/*************************************************自動切換首頁內容*****/
-/***********************************************自動切換首頁內容背景**/
+var chText = setInterval('changeGreeting()',4000);
+
 var currentIndex = 0;
 function changeBg(){
-  var changeImgs = [    
-    "imgs/joshua-earle-1420452-unsplash.jpg",
-    "imgs/gaspar-manuel-zaldo-1416277-unsplash.jpg"
-  ];
   currentIndex++;
   currentIndex%=2;  
   //主要要把currentIndex的值儲存起來,,,,只有currentIndex%2只是運算式
@@ -295,163 +232,47 @@ function changeBg(){
   var mainBg='';
   var mainBg = document.getElementById('mainContainer');
   mainBg.style.background = "url(" + changeImgs[currentIndex] + " )";
-  /* 這段程式碼無法動作
-  mainBg.style.backgroundSize = 'center';
-  mainBg.style.backgroundPosition = 'centet';
-  */
   document.getElementById('mainContainer').style.backgroundSize = 'cover';
   document.getElementById('mainContainer').style.backgroundPosition ='center';
 }
 var chBg = setInterval('changeBg()',4000);
-/**************************************************自動切換首頁內背景*/
 
 
-/**取消預設(大學)**/
-document.querySelector('.universityA').addEventListener('click' , function(event){
+$('.education-event').on('click' , function(event){
   event.preventDefault();
 },false);
-/**事件邦定**/
-var uniButton='';
 var uniButton = document.querySelector('.universityA');
-uniButton.addEventListener('click' , uniDisplay);
-
-function uniDisplay(){
-  var changeColor =[
-    '#f2f3f7',
-    'dodgerblue'
-  ];
-  var changeTextColor =[
-    "#333",
-    "#fff"
-  ];
-
+uniButton.addEventListener('click' , function(){
   var eduBg = document.querySelector('.universityA');
   var changeFas = document.getElementById('uniFas');
-  if(eduBg.style.background === changeColor[0]){
-    eduBg.style.background = changeColor[1];
-  } else if(eduBg.style.background === changeColor[1]){
-    eduBg.style.background = changeColor[0];
-    eduBg.style.color = changeTextColor[0];
-    changeFas.setAttribute('class' , ' fas fa-plus');
-  } else{
-    eduBg.style.background = changeColor[1];
-    eduBg.style.color = changeTextColor[1];
-    changeFas.setAttribute('class' , ' fas fa-minus');
-  }
-  
-  var uniBody = document.querySelector('.universityBody');
-  if(uniBody.style.display==='none'){
-    uniBody.style.display='';
-  } else{
-    uniBody.style.display='none';
-  }
-}
-/**取消預設(高中)**/
-document.querySelector('.highSchoolA').addEventListener('click' , function(event){
-  event.preventDefault();
-},false);
-/**事件邦定**/
-var highButton='';
+  var changeBody = document.querySelector('.universityBody');
+  Display(eduBg , changeFas , changeBody);
+});
 var highButton = document.querySelector('.highSchoolA');
-highButton.addEventListener('click' , highDisplay);
-
-function highDisplay(){
-  var changeColor =[
-    "#f2f3f7",
-    "dodgerblue"
-  ];
-  var changeTextColor =[
-    "#333",
-    "#fff"
-  ];
-
-  var eduBg='';
+highButton.addEventListener('click' , function(){
   var eduBg = document.querySelector('.highSchoolA');
   var changeFas = document.getElementById('highFas');
-  if(eduBg.style.background === changeColor[0]){
-    eduBg.style.background = changeColor[1];
-  } else if(eduBg.style.background === changeColor[1]){
-    eduBg.style.background = changeColor[0];
-    eduBg.style.color = changeTextColor[0];
-    changeFas.setAttribute('class' , ' fas fa-plus');
-  } else{
-    eduBg.style.background = changeColor[1];
-    eduBg.style.color = changeTextColor[1];
-    changeFas.setAttribute('class' , ' fas fa-minus');
-  }
-
-  var highBody = document.querySelector('.highSchoolBody');//先定義儲存變數
-  if(highBody.style.display==='none'){
-    highBody.style.display='';
-  } else{
-    highBody.style.display='none';
-  }
-}
-/**取消預設(國中)**/
-document.querySelector('.juniorHighA').addEventListener('click' , function(event){
-  event.preventDefault();
-},false);
-/**事件邦定**/
-var juniButton='';
+  var changeBody = document.querySelector('.highSchoolBody');
+  Display(eduBg , changeFas , changeBody);
+});
 var juniButton = document.querySelector('.juniorHighA');
-juniButton.addEventListener('click' , juniDisplay);
-
-function juniDisplay(){
-  var changeColor =[
-    "#f2f3f7",
-    "dodgerblue"
-  ];
-  var changeTextColor =[
-    "#333",
-    "#fff"
-  ];
-
-  var eduBg='';
+juniButton.addEventListener('click' , function(){
   var eduBg = document.querySelector('.juniorHighA');
   var changeFas = document.getElementById('juniFas');
-  if(eduBg.style.background === changeColor[0]){
-    eduBg.style.background = changeColor[1];
-  } else if(eduBg.style.background === changeColor[1]){
-    eduBg.style.background = changeColor[0];
-    eduBg.style.color = changeTextColor[0];
-    changeFas.setAttribute('class' , ' fas fa-plus');
-  } else{
-    eduBg.style.background = changeColor[1];
-    eduBg.style.color = changeTextColor[1];
-    changeFas.setAttribute('class' , ' fas fa-minus');
-  }
-
-  var juniBody = document.querySelector('.juniorHighBody');
-  if(juniBody.style.display==='none'){
-    juniBody.style.display='';
-  } else{
-    juniBody.style.display='none';
-  }
-}
-/**取消預設(國小)**/
-document.querySelector('.elementaryA').addEventListener('click' , function(event){
-  event.preventDefault();
-},false);
-/**事件邦定**/
-var elemButton='';
+  var changeBody = document.querySelector('.juniorHighBody');
+  Display(eduBg , changeFas , changeBody);
+});
 var elemButton = document.querySelector('.elementaryA');
-elemButton.addEventListener('click' , elemDisplay);
-
-function elemDisplay(){
-  var changeColor =[
-    "#f2f3f7",
-    "dodgerblue"
-  ];
-  var changeTextColor =[
-    "#333",
-    "#fff"
-  ];
-
-  var eduBg='';
+elemButton.addEventListener('click' , function(){
   var eduBg = document.querySelector('.elementaryA');
   var changeFas = document.getElementById('elemFas');
+  var changeBody = document.querySelector('.elementaryBody');
+  Display(eduBg , changeFas , changeBody);
+});
+
+function Display(eduBg, changeFas ,changeBody ){
   if(eduBg.style.background === changeColor[0]){
-    eduBg.style.background === changeColor[1];
+    eduBg.style.background = changeColor[1];
   } else if(eduBg.style.background === changeColor[1]){
     eduBg.style.background = changeColor[0];
     eduBg.style.color = changeTextColor[0];
@@ -461,20 +282,9 @@ function elemDisplay(){
     eduBg.style.color = changeTextColor[1];
     changeFas.setAttribute('class' , ' fas fa-minus');
   }
-
-  var elemBody = document.querySelector('.elementaryBody');
-  if(elemBody.style.display==='none'){
-    elemBody.style.display='';
+  if(changeBody.style.display==='none'){
+    changeBody.style.display='';
   } else{
-    elemBody.style.display='none';
+    changeBody.style.display='none';
   }
 }
-
-
-
-
-
-
-
-
-

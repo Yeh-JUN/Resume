@@ -176,7 +176,7 @@
 }
 
 .greeting{
-  display: inline-block;
+  display:inline-block;
   position:relative;
   top:35%;
   left:5%;
@@ -198,7 +198,7 @@
   color:#f2f3f7;
 }
 
-.smallTitle{
+.subTitle{
   text-transform:uppercase;
   padding-bottom:15px;
   font-size:10px;
@@ -207,7 +207,7 @@
   color: #999;
 }
 
-.bigTitle{
+.mainTitle{
   text-transform:uppercase;
   margin-bottom:70px;
   font-size:18px;
@@ -242,15 +242,15 @@
 
 
 /***************persinal**************/
-#personalContainer{
+#personalContainer , #educationContainer , #experienceContainer , 
+#skillsContainer , #worksContainer{
   padding-left:40px;
   padding-right:40px;
   padding-top:65px;
   padding-bottom:130px;
 }
 
-.personalTextOne , .personalTextTwo , .personalTextThree , 
-.personalTextFour , .personalTextFive , .personalTextSix{
+.personalText{
   margin-bottom:25px;
   font-size:18px;
   font-weight:400;
@@ -259,12 +259,6 @@
 /***************persinal**************/
 
 /**************education***************/
-#educationContainer{
-  padding-left:40px;
-  padding-right:40px;
-  padding-top:65px;
-  padding-bottom:130px;
-}
 .universityA , .highSchoolA , .juniorHighA , .elementaryA{
   position:relative;
   text-decoration:none;
@@ -288,6 +282,7 @@
   border: 1px solid #e6e6e6!important;
 }
 
+
 .schoolTitle{
   font-size:15px;
   font-weight:400;
@@ -302,13 +297,6 @@
 /**************education***************/
 
 /**************experience**************/
-#experienceContainer{
-  padding-left:40px;
-  padding-right:40px;
-  padding-top:65px;
-  padding-bottom:130px;
-}
-
 .circle{
   display:block;
   background-color: #2c98f0;
@@ -398,31 +386,25 @@
 
 
 /**************skills*****************/
-#skillsContainer{
-  padding-left:40px;
-  padding-right:40px;
-  padding-top:65px;
-  padding-bottom:130px;
-}
-
 .skillTitle{
   padding-top:30px;
   padding-bottom:10px;
-  border-bottom:  #e6e6e6 10px solid;
+  border-bottom:#e6e6e6 10px solid;
   width:100%;
   text-align:left;
   font-weight:400;
 }
-
-.htmlProgress{
-  width:0%;/*75*/
+.initial-progress{
+  width:0%;
   height:0;
-  border-top:#FDD835 5px solid;
-  border-bottom: #FDD835 5px solid;
-  border-radius: 12px;
   position:relative;
   top:-10px;
   text-align:right;
+  border-radius: 12px;
+}
+.htmlProgress{
+  border-top:#FDD835 5px solid;
+  border-bottom: #FDD835 5px solid;
 }
 .htmlSpan{
   color:#FDD835;
@@ -446,15 +428,8 @@
 }
 
 .cssProgress{
-  width:0%;/*80*/
-  height:0;
   border-top:#8E24AA 5px solid;
   border-bottom:#8E24AA 5px solid;
-  border-radius: 12px;
-  position: relative;
-  top:-10px;
-  text-align:right;
-  
 }
 .cssSpan{
   color:#8E24AA;
@@ -474,15 +449,9 @@
 }
 
 .jsProgress{
-  width:0%;/*65*/
-  height:0;
   border-top:#00E676 5px solid;
   border-bottom:#00E676 5px solid;
   border-radius: 12px;
-  position: relative;
-  top:-10px;
-  text-align:right;
-  
 }
 .jsSpan{
   color:#00E676;
@@ -501,15 +470,8 @@
 }
 
 .jqProgress{
-  width:0%;/*60*/
-  height:0;
   border-top:#FB8C00 5px solid;
   border-bottom:#FB8C00 5px solid;
-  border-radius: 12px;
-  position: relative;
-  top:-10px;
-  text-align:right;
-  
 }
 .jqSpan{
   color:#FB8C00;
@@ -528,14 +490,8 @@
 }
 
 .gitProgress{
-  width:0%;/*45*/
-  height:0;
   border-top:#2979FF 5px solid;
   border-bottom:#2979FF 5px solid;
-  border-radius: 12px;
-  position: relative;
-  top:-10px;
-  text-align:right;
 }
 .gitSpan{
   color:#2979FF;
@@ -555,48 +511,31 @@
 /**************skills*****************/
 
 /**************works*****************/
-#worksContainer{
-  padding-left:40px;
-  padding-right:40px;
-  padding-top:65px;
-  padding-bottom:130px;
+.works-size-position{
+  height: 300px;
+  width: 330px;
+  display: inline-block;
+  position:relative;
 }
 
 .worksFirstContainer{
   background-image:url(../imgs/work1-330.jpg);
-  height: 300px;
-  width: 330px;
-  display: inline-block;
   margin:0 13px 0 0;
-  position:relative;
 }
 .worksSecondContainer{
   background-image:url(../imgs/work2-330.jpg);
-  height: 300px;
-  width: 330px;
   margin:0 0 0 13px;
-  display: inline-block;
-  
-  position:relative;
 }
 .worksThirdContainer{
   background-image:url(../imgs/work3-330.jpg);
-  height: 300px;
-  width: 330px;
-  display: inline-block;
   margin:23px 15px 0 0;
-  position:relative;
 }
 .worksFourthContainer{
   background-image:url(../imgs/work4-330.jpg);
-  height: 300px;
-  width: 330px;
-  display: inline-block;
   margin:23px 0 0 15px;
-  position:relative;
 }
 
-.firstItem,.secondItem,.thirdItem,.fourthItem{
+.item{
   width:100%;
   margin:0 auto;
   position:absolute;
@@ -606,7 +545,7 @@
   right:0;
   opacity:0;
 }
-.firstA,.secondA,.thirdA,.fourthA{
+.link{
   display:block;
   color:#fff;
   text-decoration:none;
@@ -616,7 +555,7 @@
   position:absolute;
   top:1%;
 }
-.firstText,.secondText,.thirdText,.fourthText{
+.Text{
   padding:0px 5px;
   font-size:10px;
   color:rgba(255, 255, 255, 0.7);
@@ -624,76 +563,19 @@
   top:20%;
 }
 
-.worksFirstContainer:hover{
+.works-container-hover:hover{
   background:#2c98f0;
 }
-.worksSecondContainer:hover{
-  background:#2c98f0;
-}
-.worksThirdContainer:hover{
-  background:#2c98f0;
-}
-.worksFourthContainer:hover{
-  background:#2c98f0;
-}
-.worksFirstContainer:hover .firstItem{
+.works-container-hover:hover .hover-item{
   opacity:1;
 }
-.worksFirstContainer:hover .firstA{
+.works-container-hover:hover .hover-link{
   position:absolute;
   top:4%;
   left:4%;
   transition:0.5s;
 }
-.worksFirstContainer:hover .firstText{
-  position:absolute;
-  top:17%;
-  left:4%;
-  transition:0.5s;
-}
-
-.worksSecondContainer:hover .secondItem{
-  opacity:1;
-}
-.worksSecondContainer:hover .secondA{
-  position:absolute;
-  top:4%;
-  left:4%;
-  transition:0.5s;
-}
-.worksSecondContainer:hover .secondText{
-  position:absolute;
-  top:17%;
-  left:4%;
-  transition:0.5s;
-}
-
-.worksThirdContainer:hover .thirdItem{
-  opacity:1;
-}
-.worksThirdContainer:hover .thirdA {
-  position:absolute;
-  top:4%;
-  left:4%;
-  transition:0.5s;
-}
-.worksThirdContainer:hover .thirdText{
-  position:absolute;
-  top:17%;
-  left:4%;
-  transition:0.5s;
-}
-
-.worksFourthContainer:hover .fourthItem{
-  opacity:1;
-}
-.worksFourthContainer:hover .fourthA{
-  position:absolute;
-  top:4%;
-  left:4%;
-  transition:0.5s;
-}
-.worksFourthContainer:hover .fourthText{
+.works-container-hover:hover .hover-text{
   position:absolute;
   top:17%;
   left:4%;
